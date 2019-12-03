@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Baskervville:400,400i&display=swap');
+
+body {
+    margin: 0;
+}
+
+.topArea {
+    margin: 50px;
+
+}
+
+.logo{
+    height: 60px;
+    width: auto;
+}
+
+.instaIcon {
+    float: right;
+}
+
+.homemenu {
+
+    align-content: center;
+    background-color: aqua;
+    margin: 50px;
+}
+
+.homemenu a {
+    padding: 25px;
+     color: black;
+    font-family: 'Baskervville', serif;
+    text-decoration: none;
+}
+
+.dianaT {
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    font-family: 'Baskervville', serif;
+}
+
+.dianaSub {
+    text-align: center;
+    font-family: 'Baskervville', serif;
+    margin: 0;
+}
+.dianaLocal {
+    text-align: center;
+    font-family: 'Baskervville';
+    font-style: italic;
+    margin: 0;
+
+}
+
+.scrollsign {
+     writing-mode: vertical-lr;
+    float: left;
+    align-content: center;
+    background-color: aqua;
+}
+
+.homeimage {
+    height:250px;
+    width: 100%;
+}
+
+
+
