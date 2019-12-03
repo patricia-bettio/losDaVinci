@@ -2,36 +2,44 @@
 
 body {
     margin: 0;
+    display: block;
 }
 
-.topArea {
-    margin: 50px;
 
-}
 
 .logo{
-    height: 60px;
-    width: auto;
+    height: auto;
+    width: 50px;
 }
 
 .instaIcon {
-    float: right;
+margin-left: auto;
 }
 
 .homemenu {
+display: flex;
 
-    align-content: center;
-    background-color: aqua;
-    margin: 50px;
+     overflow: hidden;
+    align-items: center;
+ background: rgba(255, 255, 255, 0.5);
+    padding: 40px;
 }
 
+a {
+    vertical-align: middle;
+}
 .homemenu a {
-    padding: 25px;
+
      color: black;
     font-family: 'Baskervville', serif;
     text-decoration: none;
+    padding: 0px 40px;
 }
 
+.aMiddle {
+    border-left-style: solid;
+    border-right-style: solid;
+}
 .dianaT {
     text-align: center;
     font-size: 100px;
@@ -52,17 +60,69 @@ body {
 
 }
 
+/*transition pages*/
+
+.decorText {
+       font-family: 'Baskervville';
+    font-style: italic;
+    font-size: 50px;
+    text-align: left;
+    position: relative;
+top: 50%;
+padding-left: 150px;
+    transform: translateY(-50%);
+
+
+}
+
+.sideLogo {
+    position: absolute;
+    transform: rotate(90deg);
+    right: 0;
+
+}
+
+
+
+
 .scrollsign {
-     writing-mode: vertical-lr;
-    float: left;
-    align-content: center;
+transform: rotate(270deg);
+           transform-origin: top left;
+    position: absolute;
+    top: 50%;
+    margin: 40px;
     background-color: aqua;
+     font-family: 'Baskervville', serif;
 }
 
 .homeimage {
     height:250px;
     width: 100%;
+    position: absolute;
+    background-image: url(img/1.jpg);
+    background-position: bottom;
+    bottom: 0;
 }
 
 
+/*pages*/
 
+#pageHome, #pageFirstTransition, #pageAbout{
+ width:100%;
+ height:700px;
+}
+
+#pageFirstTransition {
+    background-color: #D3BBAF;
+}
+
+/*seconde page*/
+
+#pageAbout {
+    background-color: white;
+}
+
+.decorText {
+    color: white;
+    margin: 0;
+}
