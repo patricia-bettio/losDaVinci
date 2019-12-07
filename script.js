@@ -27,6 +27,6 @@ function showAbout(about) {
     imgAbout.setAttribute("src", about.about_image.guid);
     //create function: if no data, dont display for the subtitle
     //3.Append
-    document.querySelector("#aboutPage").appendChild(aboutCopy);
+    document.querySelector("#aboutSection").appendChild(aboutCopy);
 }
 }
