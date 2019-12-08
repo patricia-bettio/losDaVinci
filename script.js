@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
     getAbout();
+    getContact();
 }
 
 //ABOUT PAGE
@@ -13,7 +14,7 @@ function getAbout() {
         .then(showAbout)
 
 function showAbout(about) {
-    console.log(about)
+  //console.log(about)
   //1.Clone the template
     const templateA = document.querySelector(".aboutTemplate").content;
     const aboutCopy = templateA.cloneNode(true);
@@ -29,4 +30,31 @@ function showAbout(about) {
     //3.Append
     document.querySelector("#aboutPage").appendChild(aboutCopy);
 }
+}
+
+//CONTACT PAGE
+
+function getContact(){
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/contact_page/79")
+    .then(res => res.json())
+    .then(showContact)
+
+    function showContact(contact){
+        console.log(contact)
+        //1.clone the template
+        const templateC = document.querySelector(".contactTemplate").content;
+        const contCopy = templateC.cloneNode(true);
+        //2.get content
+        const mail = contCopy.querySelector(".contactMail");
+        mail.textContent = contact.contact_mail;
+        const insta = contCopy.querySelector(".contactInsta");
+        insta.textContent = contact.contact_insta;
+        const phone = contCopy.querySelector(".contactPhone");
+        phone.textContent = contact.contact_phone;
+
+        const imgCont = contCopy.querySelector("img.contact_img");
+        imgCont.setAttribute("src", contact.contact_img.guid);
+        //3.append
+        document.querySelector("#contactPage").appendChild(contCopy);
+    }
 }
