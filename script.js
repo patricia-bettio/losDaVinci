@@ -58,3 +58,15 @@ function getContact(){
         document.querySelector("#contactPage").appendChild(contCopy);
     }
 }
+
+
+
+//RESPONSIVE MENU
+function myFunction() {
+  var x = document.getElementById("homemenu");
+  if (x.className === "homemenu") {
+    x.className += " responsive";
+  } else {
+    x.className = "homemenu";
+  }
+}
