@@ -71,12 +71,15 @@
 <div class="content" id="contactPage">
    <h1 class="contactTitle">get in contact with Diana by filling out the form</h1>
     <template class="contactTemplate">
-   <img class="contact_img" src="" alt="">
-    <p class="contactMail">title here</p>
+      <img class="contact_img" src="" alt="">
+      <div class="contDetails">
+       <p class="contactMail">title here</p>
 <!--    <p class="aboutSub">title here</p>-->
     <p class="contactInsta">title here</p>
     <p class="contactPhone">title here</p>
+    </div>
 </template>
+
 
 <div class="containerForm">
   <form action="action_page.php">
@@ -93,10 +96,10 @@
       <option value="canada">Classes</option>
       <option value="usa">Other</option>
     </select>
- <label for="titleF">TITLE</label>
-    <textarea id="titleF" name="Title" placeholder="Write title.." style="height:100px"></textarea>
+ <label for="titleF">Title</label>
+      <input type="text" id="titleForm" name="TitleForm" placeholder="Subject..">
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
 
     <input type="submit" value="Submit">
 
