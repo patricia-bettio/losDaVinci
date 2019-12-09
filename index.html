@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diana Stroie</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<nav class="homemenu">
+<nav class="homemenu" id="homemenu">
       <img src="img/color_4.png" alt="" class="logo" >
        <a href="#aboutSection">About</a>
        <a href="#galleryPage" class="aMiddle">Gallery</a>
        <a href="#contactPage">Contact</a>
        <a href="https://www.instagram.com/sailjupiter/" target="_blank" class="instaIcon">INSTAGRAM</a>
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
    </nav>
 
 <section>
 <div class="content">
  <img alt="" class="homeimage">
   <p class="dianaT">Diana Stroie</p>
-  <p class="dianaSub">Transylvanian artist based in</p>
-  <p class="dianaLocal">Versailles, France</p>
-  <aside class="scrollsign">scroll down</aside>
+    <p class="dianaLocal">Painter based in Versailles, France</p>
+  <p class="dianaSub">Fullfilling the empty spaces of your home with paintings that inspire, provoke and awake true emotions.</p>
+
+<!--  <aside class="scrollsign">scroll down</aside>-->
 
 </div>
 </section>
@@ -71,12 +76,15 @@
 <div class="content" id="contactPage">
    <h1 class="contactTitle">get in contact with Diana by filling out the form</h1>
     <template class="contactTemplate">
-   <img class="contact_img" src="" alt="">
-    <p class="contactMail">title here</p>
+      <img class="contact_img" src="" alt="">
+      <div class="contDetails">
+       <p class="contactMail">title here</p>
 <!--    <p class="aboutSub">title here</p>-->
     <p class="contactInsta">title here</p>
     <p class="contactPhone">title here</p>
+    </div>
 </template>
+
 
 <div class="containerForm">
   <form action="action_page.php">
@@ -93,10 +101,10 @@
       <option value="canada">Classes</option>
       <option value="usa">Other</option>
     </select>
- <label for="titleF">TITLE</label>
-    <textarea id="titleF" name="Title" placeholder="Write title.." style="height:100px"></textarea>
+ <label for="titleF">Title</label>
+      <input type="text" id="titleForm" name="TitleForm" placeholder="Subject..">
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
 
     <input type="submit" value="Submit">
 
