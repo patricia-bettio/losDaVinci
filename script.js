@@ -1,6 +1,12 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get("category")
+   if(category){
+       //console.log("show category ID", categoryId)
+       getCategoryGallery(category);
+   }
     getAbout();
     getContact();
     getGallery();
@@ -68,6 +74,18 @@ function getGallery(){
     .then(res => res.json())
     .then(showGallery)
 }
+
+//category
+
+function getCategoryGallery(catId){
+    console.log(catId)
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page?_embed&categories=" + catId)
+    .then(res => res.json())
+    .then(showGallery)
+
+}
+
+
 function showGallery (getPaintings){
     //console.log(theGallery)
     //loop the paintings in the array
@@ -79,7 +97,7 @@ function showPaintings(painting){
     //2.clone the template
     //image
     const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
-    //console.log(imgPath)
+    console.log(imgPath)
     const templateG = document.querySelector(".galleryTemplate").content;
     const galleryCopy = templateG.cloneNode(true);
     //3.text content
@@ -97,7 +115,7 @@ function showPaintings(painting){
 //CATEGORIES
 
 function getCategories(){
-    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/categories")
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/categories?")
     .then(res => res.json())
     .then(categories => {
         //Loop the array of categories
@@ -107,13 +125,13 @@ function getCategories(){
 }
 //show each category
 function addCategory(oneCategory){
-    console.log(oneCategory.name)
+    //console.log(oneCategory.name)
     //if(oneCategory.parent === 24 && oneCategory.count > 0) - if there were EMPTY categories not to be included - not this case
     if(oneCategory.parent === 24 && oneCategory.count > 0){
-           const category = document.createElement("a");
-    category.textContent = oneCategory.name;
-        category.setAttribute("href", "#gallerySection")
-    document.querySelector("#categoryMenu").appendChild(category);
+           const categoryLink = document.createElement("a");
+    categoryLink.textContent = oneCategory.name;
+        categoryLink.setAttribute("href", "category.html?category=" + oneCategory.id);
+    document.querySelector("#categoryMenu").appendChild(categoryLink);
     }
 
 }
