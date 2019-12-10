@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
     getAbout();
     getContact();
+    getGallery();
 }
 
 //ABOUT PAGE
@@ -40,7 +41,7 @@ function getContact(){
     .then(showContact)
 
     function showContact(contact){
-        console.log(contact)
+        //console.log(contact)
         //1.clone the template
         const templateC = document.querySelector(".contactTemplate").content;
         const contCopy = templateC.cloneNode(true);
@@ -59,6 +60,38 @@ function getContact(){
     }
 }
 
+//GALLERY PAGE
+
+function getGallery(){
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page?_embed")
+    .then(res => res.json())
+    .then(showGallery)
+}
+
+function showGallery (getPaintings){
+    //console.log(theGallery)
+    getPaintings.forEach(showPaintings);
+}
+
+function showPaintings(painting){
+    console.log(painting);
+    //2.clone the template
+    //image
+    const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+    //console.log(imgPath)
+    const templateG = document.querySelector(".galleryTemplate").content;
+    const galleryCopy = templateG.cloneNode(true);
+    //3.text content
+    /*const pTitle = galleryCopy.querySelector(".paintTitle");
+    pTitle.innerHTML = painting.title.rendered;*/
+    //image
+    const imgGallery = galleryCopy.querySelector(".img_Gallery");
+    imgGallery.setAttribute("src", imgPath);
+    //4.append
+    document.querySelector("#galleryPage").appendChild(galleryCopy);
+}
+
+//LUCI GET DETAILGALLERY
 
 
 //RESPONSIVE MENU
