@@ -4,6 +4,7 @@ function init() {
     getAbout();
     getContact();
     getGallery();
+    getCategories();
 }
 
 //ABOUT PAGE
@@ -67,14 +68,14 @@ function getGallery(){
     .then(res => res.json())
     .then(showGallery)
 }
-
 function showGallery (getPaintings){
     //console.log(theGallery)
+    //loop the paintings in the array
     getPaintings.forEach(showPaintings);
 }
-
+//show each painting
 function showPaintings(painting){
-    console.log(painting);
+    //console.log(painting);
     //2.clone the template
     //image
     const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
@@ -91,6 +92,31 @@ function showPaintings(painting){
     document.querySelector("#galleryPage").appendChild(galleryCopy);
 }
 
+
+
+//CATEGORIES
+
+function getCategories(){
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/categories")
+    .then(res => res.json())
+    .then(categories => {
+        //Loop the array of categories
+        //console.log(categories)
+        categories.forEach(addCategory)
+    })
+}
+//show each category
+function addCategory(oneCategory){
+    console.log(oneCategory.name)
+    //if(oneCategory.parent === 24 && oneCategory.count > 0) - if there were EMPTY categories not to be included - not this case
+    if(oneCategory.parent === 24 && oneCategory.count > 0){
+           const category = document.createElement("a");
+    category.textContent = oneCategory.name;
+        category.setAttribute("href", "#gallerySection")
+    document.querySelector("#categoryMenu").appendChild(category);
+    }
+
+}
 //LUCI GET DETAILGALLERY
 
 
