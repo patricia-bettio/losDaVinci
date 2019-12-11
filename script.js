@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
+    const urlParams     = new URLSearchParams(window.location.search);
+    const id            = urlParams.get("id");
     console.log(id);
-    const category = urlParams.get("category");
+    const category      = urlParams.get("category");
 
     if (category) {
         getCategoryGallery(category);
@@ -35,15 +35,15 @@ function getAbout() {
     function showAbout(about) {
         //console.log(about)
         //1.Clone the template
-        const templateA = document.querySelector(".aboutTemplate").content;
-        const aboutCopy = templateA.cloneNode(true);
+        const templateA     = document.querySelector(".aboutTemplate").content;
+        const aboutCopy     = templateA.cloneNode(true);
         //2.Text content
-        const desc = aboutCopy.querySelector(".aboutText");
-        desc.innerHTML = about.content.rendered;
-        const aboutT = aboutCopy.querySelector(".aboutTitle");
-        aboutT.innerHTML = about.title.rendered;
+        const desc          = aboutCopy.querySelector(".aboutText");
+        desc.innerHTML      = about.content.rendered;
+        const aboutT        = aboutCopy.querySelector(".aboutTitle");
+        aboutT.innerHTML    = about.title.rendered;
 
-        const imgAbout = aboutCopy.querySelector("img.about_img");
+        const imgAbout      = aboutCopy.querySelector("img.about_img");
         imgAbout.setAttribute("src", about.about_image.guid);
         //create function: if no data, dont display for the subtitle
         //3.Append
@@ -61,17 +61,17 @@ function getContact() {
     function showContact(contact) {
         //console.log(contact)
         //1.clone the template
-        const templateC = document.querySelector(".contactTemplate").content;
-        const contCopy = templateC.cloneNode(true);
+        const templateC     = document.querySelector(".contactTemplate").content;
+        const contCopy      = templateC.cloneNode(true);
         //2.get content
-        const mail = contCopy.querySelector(".contactMail");
-        mail.textContent = contact.contact_mail;
-        const insta = contCopy.querySelector(".contactInsta");
-        insta.textContent = contact.contact_insta;
-        const phone = contCopy.querySelector(".contactPhone");
-        phone.textContent = contact.contact_phone;
+        const mail          = contCopy.querySelector(".contactMail");
+        mail.textContent    = contact.contact_mail;
+        const insta         = contCopy.querySelector(".contactInsta");
+        insta.textContent   = contact.contact_insta;
+        const phone         = contCopy.querySelector(".contactPhone");
+        phone.textContent   = contact.contact_phone;
 
-        const imgCont = contCopy.querySelector("img.contact_img");
+        const imgCont       = contCopy.querySelector("img.contact_img");
         imgCont.setAttribute("src", contact.contact_img.guid);
         //3.append
         document.querySelector("#contactPage").appendChild(contCopy);
@@ -90,7 +90,7 @@ function getGallery() {
 function showGallery(jsonObj){
 
     // Store the destination for the template copies once
-    const destination = document.getElementById("galleryPage")
+    const destination       = document.getElementById("galleryPage")
 
     // Create a loop through each json object from the link
     jsonObj.forEach(e=>{
@@ -135,12 +135,12 @@ function showGallery(jsonObj){
 function manageModal(clickedLink){
 
     // Find the current target (the clicked element)
-    let anchor = clickedLink.currentTarget;
+    let anchor      = clickedLink.currentTarget;
 
     // Get the id of the child of the clicked element (the image id = the post id)
-    let imageId = anchor.firstElementChild.getAttribute('id');
-
-    //    console.log(imageId);
+    let imageId     = anchor.firstElementChild.getAttribute('id');
+    //confirm: we are getting each post type image ID when clicking a single image
+    console.log(imageId);
 }
 
 
@@ -150,7 +150,7 @@ function manageModal(clickedLink){
 
 
 
-//SUBpage - when selecting ONE single image - individual painting details page - to be connected with LUCCI
+//SUBpage - when selecting ONE single image - individual painting details page - to be trasformed into a MODAL
 function makeModalWithImage() {
     /*// console.log("make sub here")
     const urlParams = new URLSearchParams(window.location.search);
@@ -183,15 +183,16 @@ function makeModalWithImage() {
     */
 }
 
-//CATEGORY - gets paintings results based on categpory number
 
-/*function getCategoryGallery(catId) {
+//CATEGORY - gets paintings results based on category number
+
+function getCategoryGallery(catId) {
     console.log("getCategoryGallery() called")
     console.log(catId)
     fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page?_embed&categories=" + catId)
         .then(res => res.json())
         .then(showGallery)
-}*/
+}
 
 /*function showGallery(paintings) {
     console.log("paintings from one category", paintings)
@@ -244,10 +245,10 @@ function addCategory(oneCategory) {
     //console.log(oneCategory.name)
     //&& oneCategory.count > 0) - if there were EMPTY categories not to be included - not this case
     if (oneCategory.parent === 24 && oneCategory.count > 0) {
-        const categoryLink = document.createElement("a");
-        categoryLink.textContent = oneCategory.name;
-        categoryLink.setAttribute("href", "category.html?category=" + oneCategory.id);
-    document.querySelector("#categoryMenu").appendChild(categoryLink);
+        const categoryLink          = document.createElement("a");
+        categoryLink.textContent    = oneCategory.name;
+        categoryLink.setAttribute("href", "category.html?category=" + oneCategory.id + "#gallerySection");
+        document.querySelector("#categoryMenu").appendChild(categoryLink);
     }
 
 }
