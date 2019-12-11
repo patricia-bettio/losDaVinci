@@ -9,7 +9,7 @@ function init() {
     if (category) {
         getCategoryGallery(category);
     } else if (id) {
-        makeSub();
+        makeModalWithImage();
     }
     //If on the index.html page, run the getGallery page-all results
     //all results- only on Index page
@@ -87,14 +87,75 @@ function getGallery() {
         .then(showGallery)
 }
 
+function showGallery(jsonObj){
+
+    // Store the destination for the template copies once
+    const destination = document.getElementById("galleryPage")
+
+    // Create a loop through each json object from the link
+    jsonObj.forEach(e=>{
+
+        // Store image info in variable
+        const imgPath       = e._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url
+
+        // Store the template itself in a variable
+        const templateG     = document.querySelector(".galleryTemplate").content
+
+        // Clone the template
+        const galleryCopy   = templateG.cloneNode(true)
+
+        // Store the anchor object/a-tag around the image
+        const anchor        = galleryCopy.querySelector("a")
+
+        // Store the image itself
+        const imgGallery    = galleryCopy.querySelector("a .img_Gallery")
+
+        // Set the src-attribute
+        imgGallery.setAttribute("src", imgPath)
+
+        // Set the id-attribute
+        imgGallery.setAttribute("id", e.id)
+
+        // Append everything to the chosen destination
+        destination.appendChild(galleryCopy)
+
+        // Create a click event attached to the anchor tag around the image tag
+        anchor.addEventListener('click', e=>{
+
+            // Stop the anchor from its default behavior
+            e.preventDefault();
+
+            // Call the function to handle the modal/pop-up
+            manageModal(e);
+        })
+    })
+}
+
+
+function manageModal(clickedLink){
+
+    // Find the current target (the clicked element)
+    let anchor = clickedLink.currentTarget;
+
+    // Get the id of the child of the clicked element (the image id = the post id)
+    let imageId = anchor.firstElementChild.getAttribute('id');
+
+    //    console.log(imageId);
+}
+
+
+
+
+
+
+
 
 //SUBpage - when selecting ONE single image - individual painting details page - to be connected with LUCCI
-
-function makeSub() {
-    console.log("make sub here")
+function makeModalWithImage() {
+    /*// console.log("make sub here")
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
-    console.log(id)
+    // console.log(id)
 
     fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page/" + id + "?_embed")
         .then(res => res.json())
@@ -107,40 +168,39 @@ function makeSub() {
         const templateG = document.querySelector(".individualPaintingTemplate").content;
         const galleryCopy = templateG.cloneNode(true);
 
-        //        const pTitle = galleryCopy.querySelector(".paintTitle");
-        //        pTitle.innerHTML = painting.title.rendered;
+        const pTitle = galleryCopy.querySelector(".paintTitle");
+        pTitle.innerHTML = painting.title.rendered;
+
         //image
         const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         console.log(imgPath)
         const imgGallery = galleryCopy.querySelector(".img_Gallery");
         imgGallery.setAttribute("src", imgPath);
+
         //4.append
         document.querySelector("#galleryPage").appendChild(galleryCopy);
     }
+    */
 }
-//
-
-
 
 //CATEGORY - gets paintings results based on categpory number
 
-function getCategoryGallery(catId) {
+/*function getCategoryGallery(catId) {
     console.log("getCategoryGallery() called")
     console.log(catId)
     fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page?_embed&categories=" + catId)
         .then(res => res.json())
         .then(showGallery)
-}
+}*/
 
-
-function showGallery(paintings) {
+/*function showGallery(paintings) {
     console.log("paintings from one category", paintings)
     //console.log(theGallery)
     //loop the paintings in the array
     paintings.forEach(showPaintings);
-}
+}*/
 //shows each painting
-function showPaintings(painting) {
+/*function showPaintings(painting) {
     console.log(painting);
     console.log(painting._embedded["wp:featuredmedia"])
     //2.clone the template
@@ -156,7 +216,15 @@ function showPaintings(painting) {
     imgGallery.setAttribute("src", imgPath);
     //4.append
     document.querySelector("#galleryPage").appendChild(galleryCopy);
-}
+}*/
+
+
+
+
+
+
+
+
 
 
 
