@@ -6,20 +6,20 @@ body {
 
 
 
-.logo{
+.logo {
     height: auto;
     width: 60px;
 }
 
 .instaIcon {
-margin-left: auto;
+    margin-left: auto;
 }
 
 .homemenu {
-display: flex;
-     overflow: hidden;
+    display: flex;
+    overflow: hidden;
     align-items: center;
- background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     margin: 20px;
     padding: 10px;
     position: fixed;
@@ -30,9 +30,10 @@ display: flex;
 a {
     vertical-align: middle;
 }
+
 .homemenu a {
 
-     color: black;
+    color: black;
     font-family: 'Baskervville', serif;
     text-decoration: none;
     padding: 0px 40px;
@@ -45,30 +46,37 @@ a {
 
 
 .homemenu .icon {
-  display: none;
+    display: none;
 }
 
 @media screen and (max-width: 850px) {
-  .homemenu a:not(:first-child) {display: none;}
-  .homemenu a.icon {
-    float: right;
-    display: block;
-  }
+    .homemenu a:not(:first-child) {
+        display: none;
+    }
+
+    .homemenu a.icon {
+        float: right;
+        display: block;
+    }
 }
 
 @media screen and (max-width: 850px) {
 
-  .homemenu.responsive {position: relative;}
-  .homemenu.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .homemenu.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+    .homemenu.responsive {
+        position: relative;
+    }
+
+    .homemenu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .homemenu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }
 
 
@@ -86,6 +94,7 @@ a {
     font-family: 'Baskervville', serif;
     margin: 0;
 }
+
 .dianaLocal {
     text-align: center;
     font-family: 'Baskervville';
@@ -110,17 +119,17 @@ a {
 
 
 .scrollsign {
-transform: rotate(270deg);
-           transform-origin: top left;
+    transform: rotate(270deg);
+    transform-origin: top left;
     position: absolute;
     top: 50%;
     margin: 40px;
     background-color: aqua;
-     font-family: 'Baskervville', serif;
+    font-family: 'Baskervville', serif;
 }
 
 .homeimage {
-    height:35%;
+    height: 35%;
     width: 100%;
     position: absolute;
     background-image: url(img/1.jpg);
@@ -132,19 +141,19 @@ transform: rotate(270deg);
 /*pages*/
 
 section {
-  width: 100%;
-  padding: 0;
-  display: table;
-  margin: 0;
-  max-width: none;
-  height: 100vh;
-z-index: 1;
+    width: 100%;
+    padding: 0;
+    display: table;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
+    z-index: 1;
 
 }
 
 .content {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /*#pageHome, #pageFirstTransition, #pageAbout{
@@ -185,7 +194,7 @@ z-index: 1;
     font-style: italic;
     font-size: 40px;
     text-align: left;
-        color: white;
+    color: white;
     padding: 50px;
 }
 
@@ -202,20 +211,22 @@ z-index: 1;
     padding: 0 100px;
     font-family: 'Baskervville', serif;
 }
+
 .aboutSub {
-      color: black;
+    color: black;
     margin: 0;
     font-family: 'Baskervville', serif;
 }
+
 .aboutTitle {
     color: black;
     margin: 0;
     font-family: 'Baskervville', serif;
 }
-.about_img {
 
-}
-@supports (display:grid){
+.about_img {}
+
+@supports (display:grid) {
 
     .aboutTitle {
         grid-area: aboutT;
@@ -223,22 +234,25 @@ z-index: 1;
         font-size: 40px;
         padding: 150px 100px 0;
     }
+
     .aboutText {
         grid-area: aboutTxt;
 
     }
+
     .about_img {
         grid-area: aboutImg;
-      object-fit: fill;
-    place-self: stretch;
+        object-fit: fill;
+        place-self: stretch;
     }
-#aboutPage {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-areas:
-        "aboutT aboutImg"
-        "aboutTxt aboutImg";
-}
+
+    #aboutPage {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-areas:
+            "aboutT aboutImg"
+            "aboutTxt aboutImg";
+    }
 
 }
 
@@ -252,114 +266,135 @@ z-index: 1;
     }
 
     .aboutText {
-    padding: 20px;
-}
-.aboutSub {
-padding: 20px;
-}
-.aboutTitle {
-    padding: 20px;
-}
+        padding: 20px;
+    }
+
+    .aboutSub {
+        padding: 20px;
+    }
+
+    .aboutTitle {
+        padding: 20px;
+    }
+
     .about_img {
-     height: inherit;
+        height: inherit;
         width: 100%;
-    position: relative;
-    object-fit: fill;
-     }
+        position: relative;
+        object-fit: fill;
+    }
+
     /*TRANSITIONS*/
     .decorText {
         font-size: 30px;
         padding: 20px;
     }
-     }
+}
+
 /*CONTACT PAGE*/
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #BE9252;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
+    background-color: #BE9252;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
     margin-left: 100px;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
-    input[type=text], select, textarea {
-        font-family: 'Baskervville', serif;
-  width: 60%; /* Full width */
-  padding: 8px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-bottom: 5px; /* Bottom margin */
-        margin-left: 100px;
-        margin-right: auto;
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-display:block;
+input[type=text],
+select,
+textarea {
+    font-family: 'Baskervville', serif;
+    width: 60%;
+    /* Full width */
+    padding: 8px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-bottom: 5px;
+    /* Bottom margin */
+    margin-left: 100px;
+    margin-right: auto;
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+    display: block;
 
 }
+
 #titleF {
     resize: none;
 }
-.containerForm label{
+
+.containerForm label {
     font-family: 'Baskervville', serif;
     width: 60%;
     margin-left: 100px;
-        margin-right: auto;
+    margin-right: auto;
     display: block;
 
 }
 
-  .contactMail {
+.contactMail {
     display: block;
     font-family: 'Baskervville', serif;
-    }
+}
+
 .contactInsta {
     display: block;
     font-family: 'Baskervville', serif;
-    }
+}
+
 .contactPhone {
     display: block;
     font-family: 'Baskervville', serif;
-    }
+}
 
 /* Add a background color and some padding around the form */
 .containerForm {
-  background-color: white;
+    background-color: white;
 }
 
-    .contactTitle {
-         display: block;
+.contactTitle {
+    display: block;
     font-family: 'Baskervville', serif;
 
 }
+
 @supports (display:grid) {
     .contactTitle {
         grid-area: contactT;
         font-family: 'Baskervville', serif;
-            align-content: center;
-    font-size: 40px;
+        align-content: center;
+        font-size: 40px;
         margin: 0;
-    padding: 120px 100px;
+        padding: 120px 100px;
         font-weight: 100;
 
     }
+
     .containerForm {
         grid-area: form;
-       }
-    p.contactMail{
+    }
+
+    p.contactMail {
         grid-area: contD;
         text-align: center;
     }
 
-  .contact_img {
-    grid-area: contImg;
-    object-fit: cover;
-    place-self: stretch;
-}
+    .contact_img {
+        grid-area: contImg;
+        object-fit: cover;
+        place-self: stretch;
+    }
+
     .contDetails {
         grid-area: 1 / 2 / 4 / 4;
         background-color: rgba(255, 255, 255, 0.9);
@@ -367,12 +402,13 @@ display:block;
         text-align: center;
         /*align-self: center;*/
     }
-    containerForm{
+
+    containerForm {
         display: grid;
         grid-area: form;
     }
 
-    #contactPage{
+    #contactPage {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: 300px 1fr 200px;
@@ -392,28 +428,32 @@ display:block;
     }
 
     .contactTitle {
-    padding: 20px;
-}
+        padding: 20px;
+    }
 
     .contact_img {
 
         height: inherit;
         width: 100%;
-    position: relative;
-    object-fit: fill;
-     }
-input[type=text], select, textarea {
-    margin: 5px 20px;
-    width: 90%;
+        position: relative;
+        object-fit: fill;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        margin: 5px 20px;
+        width: 90%;
     }
 
     input[type=submit] {
         margin: 5px 20px;
     }
+
     .containerForm label {
         margin: 5px 20px;
     }
-     }
+}
 
 /*GALLERY PAGE*/
 
@@ -426,17 +466,18 @@ input[type=text], select, textarea {
 #galleryPage {
     padding: 20px;
 }
-@supports (display:grid){
+
+@supports (display:grid) {
     .galleryText {
-              font-family: 'Baskervville', serif;
-            align-content: center;
-    font-size: 40px;
+        font-family: 'Baskervville', serif;
+        align-content: center;
+        font-size: 40px;
         margin: 0;
-    padding: 120px 100px 50px;
+        padding: 120px 100px 50px;
         font-weight: 100;
     }
 
-#galleryPage {
+    #galleryPage {
         display: grid;
         grid-area: galleryPage;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -446,4 +487,191 @@ input[type=text], select, textarea {
         align-items: center;
         justify-content: center;
     }
+}
+
+/*Lucci32*/
+}
+
+#arrowleft,
+#arrowright,
+#artpaint {
+    max-width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    font-family: 'baskervville', serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1%;
+    overflow: hidden;
+}
+
+.container div {
+    display: grid;
+    place-items: center;
+}
+
+.left {
+    transform: translateY(-100vh);
+    animation: slidedown-anim 1.5s ease-in-out both;
+    background-color: #d3bbaf;
+    height: 100vh;
+}
+
+.left p {
+    /*font-family: 'baskervville', serif;*/
+    font-size: 60px;
+
+}
+
+@keyframes slidedown-anim {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Button content*/
+
+
+
+.left p,
+.paint {
+    animation: buttonleft-anim 3s;
+    text-align: center;
+    opacity: 1;
+    /*transform: matrix(1, 0, 0, 1, 0, 0);*/
+}
+
+@keyframes buttonleft-anim {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 0.1;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    65% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0.4;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    95% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.right p {
+    /*animation: buttonright-anim 4.5s ease-in-out both;*/
+    text-align: center;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    /*transform: translate(10px, 6px);
+     margin: 0 0 -6px -10px;*/
+}
+
+
+@keyframes buttonright-anim {
+    100% {
+        transform: translateX(0);
+    }
+
+    0% {
+        transform: translateX(100vh);
+    }
+}
+
+
+/* Diana content*/
+.right {
+    animation: slideup-anim 1.5s ease-in-out both;
+    background-color: white;
+}
+
+@keyframes slideup-anim {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Gallery content*/
+/*.content {
+     animation: slideright-anim 4.5s ease-in-out both;
+     text-align: center;
+ }
+*/
+@keyframes slideright-anim {
+    100% {
+        transform: translateX(0);
+    }
+
+    0% {
+        transform: translateX(100vh);
+    }
+}
+
+.arrow-top-left {
+    width: 70px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.arrow-top-right {
+    width: 70px;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    right: 0;
+    /*margin: -20px;
+     margin-left: 640px;*/
+    padding: 0;
+}
+
+#page2 {
+    background-color: #138762;
 }
