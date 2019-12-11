@@ -2,14 +2,32 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
     const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get("category")
-   if(category){
-       //console.log("show category ID", categoryId)
-       getCategoryGallery(category);
-   }
+    const id = urlParams.get("id");
+    console.log(id);
+    const category = urlParams.get("category");
+
+//   if (id) {
+//       makeSub();
+//   }
+//    else if(category){
+//       //console.log("show category ID", categoryId)
+//       getCategoryGallery(category);
+//   }
+
+    if(category){
+        getCategoryGallery(category);
+    } else if(id) {
+        makeSub();
+    }
+
+    console.log("am i on index?",window.location.href.includes("index"))
+
+    if(window.location.href.includes("index")) {
+        getGallery();
+    }
+
     getAbout();
     getContact();
-    getGallery();
     getCategories();
 }
 
@@ -74,10 +92,58 @@ function getGallery(){
     .then(res => res.json())
     .then(showGallery)
 }
+//SUBpage
+
+function makeSub() {
+    console.log("make sub here")
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    console.log(id)
+
+
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page/" + id + "?_embed")
+        .then(res => res.json())
+        .then(showGallery)
+
+
+       //image
+      function showGallery(painting) {
+        console.log("painting", painting)
+
+        const templateG = document.querySelector(".individualPaintingTemplate").content;
+        const galleryCopy = templateG.cloneNode(true);
+
+//        const pTitle = galleryCopy.querySelector(".paintTitle");
+//        pTitle.innerHTML = painting.title.rendered;
+        //image
+          const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+        console.log(imgPath)
+        const imgGallery = galleryCopy.querySelector(".img_Gallery");
+        imgGallery.setAttribute("src", imgPath);
+        //4.append
+        document.querySelector("#galleryPage").appendChild(galleryCopy);
+
+    }
+
+
+}
+
+//
+
+
+
+
+function getGallery(){
+    console.log("getGallery() called")
+    fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page?_embed")
+    .then(res => res.json())
+    .then(showGallery)
+}
 
 //category
 
 function getCategoryGallery(catId){
+    console.log("getCategoryGallery() called")
     console.log(catId)
     fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page?_embed&categories=" + catId)
     .then(res => res.json())
@@ -86,27 +152,34 @@ function getCategoryGallery(catId){
 }
 
 
-function showGallery (getPaintings){
+function showGallery(paintings){
+    console.log("paintings from one category",paintings)
     //console.log(theGallery)
     //loop the paintings in the array
-    getPaintings.forEach(showPaintings);
+    paintings.forEach(showPaintings);
 }
 //show each painting
 function showPaintings(painting){
-    //console.log(painting);
+    console.log(painting);
+    console.log(painting._embedded["wp:featuredmedia"])
     //2.clone the template
     //image
     const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
     console.log(imgPath)
     const templateG = document.querySelector(".galleryTemplate").content;
     const galleryCopy = templateG.cloneNode(true);
-    //3.text content
-    /*const pTitle = galleryCopy.querySelector(".paintTitle");
-    pTitle.innerHTML = painting.title.rendered;*/
-    //image
+//
+    const a = galleryCopy.querySelector("a");
+////    a.href="sub.html?id="+ painting.id;
+//    //3.text content
+//    const pTitle = galleryCopy.querySelector(".paintTitle");
+////        console.log(galleryCopy)
+//
+////    pTitle.innerHTML = painting.title.rendered;
+//    //image
     const imgGallery = galleryCopy.querySelector(".img_Gallery");
     imgGallery.setAttribute("src", imgPath);
-    //4.append
+//    //4.append
     document.querySelector("#galleryPage").appendChild(galleryCopy);
 }
 
