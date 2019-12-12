@@ -179,7 +179,8 @@ function addCategory(oneCategory) {
         const categoryLink = document.createElement("a");
         categoryLink.textContent = oneCategory.name;
         categoryLink.setAttribute("href", "category.html?category=" + oneCategory.id);
-    document.querySelector("#categoryMenu").appendChild(categoryLink);
+//        categoryLink.setAttribute("id", oneCategory.id);
+        document.querySelector("#categoryMenu").appendChild(categoryLink);
     }
 
 }
@@ -194,3 +195,27 @@ function myFunction() {
         x.className = "homemenu";
     }
 }
+
+//MODAL
+function showModal() {
+    let modal = document.getElementById("#modalPainting");
+    modal
+    //    modal.classList.remove('hide');
+    //    const id = e.target.getAttribute('data-id');
+    //    console.log(AllData);
+    //    console.log(AllData[id - 1].gsx$filmname.$t)
+    //    modal.querySelector(".modal-title").textContent = AllData[id - 1].gsx$filmname.$t;
+    //    modal.querySelector(".modal-description").textContent = AllData[id - 1].gsx$longdescription.$t;
+    //    modal.querySelector(".modal-budgetS").textContent = AllData[id - 1].gsx$budget.$t;
+    //    modal.querySelector(".modal-image").setAttribute("src", "imgs/" + AllData[id - 1].gsx$image.$t);
+    //modal.querySelector(".modal-description").textContent = e.longdescription;
+    //modal.classList.remove("hide");*/
+}
+showModal();
+
+//close the modal when clicked
+const modal = document.querySelector(".modal-background");
+
+modal.addEventListener("click", () => {
+    modal.classList.add("hide");
+});

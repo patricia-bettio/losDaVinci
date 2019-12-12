@@ -624,7 +624,7 @@ body {
 /* Diana content*/
 .right {
     animation: slideup-anim 1.5s ease-in-out both;
-    background-color: white;
+    background-color: blue;
 }
 
 @keyframes slideup-anim {
