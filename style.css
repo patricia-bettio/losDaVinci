@@ -27,21 +27,17 @@ body {
     z-index: 1000;
 }
 
-a {
-    vertical-align: middle;
-}
-
 .homemenu a {
 
     color: black;
     font-family: 'Baskervville', serif;
     text-decoration: none;
-    padding: 0px 40px;
+    padding: 10px;
 }
 
 .aMiddle {
-    border-left-style: solid;
-    border-right-style: solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
 }
 
 
@@ -50,6 +46,12 @@ a {
 }
 
 @media screen and (max-width: 850px) {
+    .homemenu {
+        margin: 0;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        display: block;
+    }
     .homemenu a:not(:first-child) {
         display: none;
     }
@@ -58,24 +60,33 @@ a {
         float: right;
         display: block;
     }
+
+    .logo {
+    height: 0;
+    width: 0;
+    }
+
+    .aMiddle {
+    border-left-style: none;
+    border-right-style: none;
+    }
 }
 
 @media screen and (max-width: 850px) {
 
     .homemenu.responsive {
-        position: relative;
+        position: fixed;
     }
 
     .homemenu.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
+        padding: 20px;
     }
 
     .homemenu.responsive a {
-        float: none;
         display: block;
-        text-align: left;
     }
 }
 
@@ -137,6 +148,14 @@ a {
     bottom: 0;
 }
 
+/*CATEGORIES*/
+
+nav a {
+    text-decoration: none;
+    font-family: 'Baskervville', serif;
+    padding: 5px;
+    display: block;
+}
 
 /*pages*/
 
@@ -295,6 +314,7 @@ section {
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
     background-color: #BE9252;
+    font-family: 'Baskervville', serif;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -429,6 +449,7 @@ textarea {
 
     .contactTitle {
         padding: 20px;
+        font-size: 25px;
     }
 
     .contact_img {
@@ -448,10 +469,12 @@ textarea {
 
     input[type=submit] {
         margin: 5px 20px;
+        font-size: 18px;
     }
 
     .containerForm label {
         margin: 5px 20px;
+        font-size: 18px;
     }
 }
 
