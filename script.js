@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    const urlParams     = new URLSearchParams(window.location.search);
-    const id            = urlParams.get("id");
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
     console.log(id);
-    const category      = urlParams.get("category");
+    const category = urlParams.get("category");
 
     if (category) {
         getCategoryGallery(category);
@@ -35,15 +35,15 @@ function getAbout() {
     function showAbout(about) {
         //console.log(about)
         //1.Clone the template
-        const templateA     = document.querySelector(".aboutTemplate").content;
-        const aboutCopy     = templateA.cloneNode(true);
+        const templateA = document.querySelector(".aboutTemplate").content;
+        const aboutCopy = templateA.cloneNode(true);
         //2.Text content
-        const desc          = aboutCopy.querySelector(".aboutText");
-        desc.innerHTML      = about.content.rendered;
-        const aboutT        = aboutCopy.querySelector(".aboutTitle");
-        aboutT.innerHTML    = about.title.rendered;
+        const desc = aboutCopy.querySelector(".aboutText");
+        desc.innerHTML = about.content.rendered;
+        const aboutT = aboutCopy.querySelector(".aboutTitle");
+        aboutT.innerHTML = about.title.rendered;
 
-        const imgAbout      = aboutCopy.querySelector("img.about_img");
+        const imgAbout = aboutCopy.querySelector("img.about_img");
         imgAbout.setAttribute("src", about.about_image.guid);
         //create function: if no data, dont display for the subtitle
         //3.Append
@@ -61,17 +61,17 @@ function getContact() {
     function showContact(contact) {
         //console.log(contact)
         //1.clone the template
-        const templateC     = document.querySelector(".contactTemplate").content;
-        const contCopy      = templateC.cloneNode(true);
+        const templateC = document.querySelector(".contactTemplate").content;
+        const contCopy = templateC.cloneNode(true);
         //2.get content
-        const mail          = contCopy.querySelector(".contactMail");
-        mail.textContent    = contact.contact_mail;
-        const insta         = contCopy.querySelector(".contactInsta");
-        insta.textContent   = contact.contact_insta;
-        const phone         = contCopy.querySelector(".contactPhone");
-        phone.textContent   = contact.contact_phone;
+        const mail = contCopy.querySelector(".contactMail");
+        mail.textContent = contact.contact_mail;
+        const insta = contCopy.querySelector(".contactInsta");
+        insta.textContent = contact.contact_insta;
+        const phone = contCopy.querySelector(".contactPhone");
+        phone.textContent = contact.contact_phone;
 
-        const imgCont       = contCopy.querySelector("img.contact_img");
+        const imgCont = contCopy.querySelector("img.contact_img");
         imgCont.setAttribute("src", contact.contact_img.guid);
         //3.append
         document.querySelector("#contactPage").appendChild(contCopy);
@@ -87,28 +87,28 @@ function getGallery() {
         .then(showGallery)
 }
 
-function showGallery(jsonObj){
+function showGallery(jsonObj) {
 
     // Store the destination for the template copies once
-    const destination       = document.getElementById("galleryPage")
+    const destination = document.getElementById("galleryPage")
 
     // Create a loop through each json object from the link
-    jsonObj.forEach(e=>{
+    jsonObj.forEach(e => {
 
         // Store image info in variable
-        const imgPath       = e._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url
+        const imgPath = e._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url
 
         // Store the template itself in a variable
-        const templateG     = document.querySelector(".galleryTemplate").content
+        const templateG = document.querySelector(".galleryTemplate").content
 
         // Clone the template
-        const galleryCopy   = templateG.cloneNode(true)
+        const galleryCopy = templateG.cloneNode(true)
 
         // Store the anchor object/a-tag around the image
-        const anchor        = galleryCopy.querySelector("a")
+        const anchor = galleryCopy.querySelector("a")
 
         // Store the image itself
-        const imgGallery    = galleryCopy.querySelector("a .img_Gallery")
+        const imgGallery = galleryCopy.querySelector("a .img_Gallery")
 
         // Set the src-attribute
         imgGallery.setAttribute("src", imgPath)
@@ -120,7 +120,7 @@ function showGallery(jsonObj){
         destination.appendChild(galleryCopy)
 
         // Create a click event attached to the anchor tag around the image tag
-        anchor.addEventListener('click', e=>{
+        anchor.addEventListener('click', e => {
 
             // Stop the anchor from its default behavior
             e.preventDefault();
@@ -132,15 +132,16 @@ function showGallery(jsonObj){
 }
 
 
-function manageModal(clickedLink){
+function manageModal(clickedLink) {
 
     // Find the current target (the clicked element)
-    let anchor      = clickedLink.currentTarget;
+    let anchor = clickedLink.currentTarget;
 
     // Get the id of the child of the clicked element (the image id = the post id)
-    let imageId     = anchor.firstElementChild.getAttribute('id');
+    let imageId = anchor.firstElementChild.getAttribute('id');
     //confirm: we are getting each post type image ID when clicking a single image
     console.log(imageId);
+    makeModalWithImage(imageId);
 }
 
 
@@ -151,24 +152,25 @@ function manageModal(clickedLink){
 
 
 //SUBpage - when selecting ONE single image - individual painting details page - to be trasformed into a MODAL
-function makeModalWithImage() {
+function makeModalWithImage(id) {
     /*// console.log("make sub here")
     const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
+    const id = urlParams.get("id");*/
     // console.log(id)
 
     fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/gallery_page/" + id + "?_embed")
         .then(res => res.json())
-        .then(showGallery)
+        .then(showModal)
 
     //image
-    function showGallery(painting) {
+    function showModal(painting) {
+        alert("hello");
         console.log("painting", painting)
 
-        const templateG = document.querySelector(".individualPaintingTemplate").content;
-        const galleryCopy = templateG.cloneNode(true);
+        const templateG = document.querySelector(".container").content;
+        //const galleryCopy = templateG.cloneNode(true);
 
-        const pTitle = galleryCopy.querySelector(".paintTitle");
+        const pTitle = galleryCopy.querySelector(".right p");
         pTitle.innerHTML = painting.title.rendered;
 
         //image
@@ -180,7 +182,32 @@ function makeModalWithImage() {
         //4.append
         document.querySelector("#galleryPage").appendChild(galleryCopy);
     }
-    */
+}
+
+function showModal(modalContent) {
+    //alert("hello");
+    console.log("modalContent", modalContent)
+
+    //    const modal = document.querySelector(".modal-background");
+    //    modal.addEventListener("click", () => {
+    //                modal.classList.add("hide");
+    //
+    //                //const templateG = document.querySelector(".container").content;
+    //                //const galleryCopy = templateG.cloneNode(true);
+    //
+    //                const pTitle = document.querySelector(".left p");
+    //                pTitle.innerHTML = modalContent.title.rendered;
+    //
+    //                //image
+    //                const imgPath = modalContent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+    //                console.log(imgPath)
+    //                const imgGallery = document.querySelector(".right img");
+    //                imgGallery.setAttribute("src", imgPath);
+    //
+    //                document.querySelector(".modal-background").classList.remove("hide");
+
+    //4.append
+    //document.querySelector("#galleryPage").appendChild(galleryCopy);
 }
 
 
@@ -227,8 +254,6 @@ function getCategoryGallery(catId) {
 
 
 
-
-
 //CATEGORIES MENU - finds the categories and make them a nav link
 
 function getCategories() {
@@ -245,8 +270,8 @@ function addCategory(oneCategory) {
     //console.log(oneCategory.name)
     //&& oneCategory.count > 0) - if there were EMPTY categories not to be included - not this case
     if (oneCategory.parent === 24 && oneCategory.count > 0) {
-        const categoryLink          = document.createElement("a");
-        categoryLink.textContent    = oneCategory.name;
+        const categoryLink = document.createElement("a");
+        categoryLink.textContent = oneCategory.name;
         categoryLink.setAttribute("href", "category.html?category=" + oneCategory.id + "#gallerySection");
         document.querySelector("#categoryMenu").appendChild(categoryLink);
     }
@@ -263,3 +288,28 @@ function myFunction() {
         x.className = "homemenu";
     }
 }
+
+//MODAL
+
+//const modal = document.querySelector(".modal-background");
+//modal.addEventListener("click", () => {
+//    modal.classList.add("hide");
+//});
+//
+////our cloning function
+//function showDish(dish) {
+//    copy.querySelector("button").addEventListener("click", () => {
+//        fetch("http://pbstyle.dk/wpinstall/wordpress/wp-json/wp/v2/categories?")
+//            .then(res => res.json())
+//            .then(showDetails);
+//    });
+//}
+//
+////once we have our data, ....
+//function showDetails(data) {
+//    console.log(data)
+//    modal.querySelector(".modal-name").textContent = data.name;
+//    modal.querySelector(".modal-description").textContent = data.longdescription;
+//    //...
+//    modal.classList.remove("hide");
+//}
