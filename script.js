@@ -163,24 +163,30 @@ function makeModalWithImage(id) {
         .then(showModal)
 
     //image
-    function showModal(painting) {
-        alert("hello");
-        console.log("painting", painting)
+    function showModal(modalContent) {
+        //alert("hello");
+        console.log("modalContent", modalContent)
 
-        const templateG = document.querySelector(".container").content;
-        //const galleryCopy = templateG.cloneNode(true);
+        //const templateG = document.querySelector(".container").content;
+        //  const galleryCopy = templateG.cloneNode(true);
 
-        const pTitle = galleryCopy.querySelector(".right p");
-        pTitle.innerHTML = painting.title.rendered;
+        const pTitle = document.querySelector(".left p");
+        pTitle.innerHTML = modalContent.title.rendered;
 
         //image
-        const imgPath = painting._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+        const imgPath = modalContent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         console.log(imgPath)
-        const imgGallery = galleryCopy.querySelector(".img_Gallery");
-        imgGallery.setAttribute("src", imgPath);
+        const modalImg = document.querySelector(".right img");
+        modalImg.setAttribute("src", imgPath);
 
+        const modal = document.querySelector(".modal-background");
+        modal.addEventListener("click", () => {
+            modal.classList.add("hide");
+        });
+
+        modal.classList.remove('hide');
         //4.append
-        document.querySelector("#galleryPage").appendChild(galleryCopy);
+        //document.querySelector("#galleryPage").appendChild(galleryCopy);
     }
 }
 
