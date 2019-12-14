@@ -19,7 +19,7 @@ body {
     display: flex;
     overflow: hidden;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 85%);
     margin: 20px;
     padding: 10px;
     position: fixed;
@@ -95,38 +95,29 @@ body {
 
 .dianaT {
     text-align: center;
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
     font-family: 'Baskervville', serif;
+    line-height: 1em;
 }
 
 .dianaSub {
     text-align: center;
     font-family: 'Baskervville', serif;
     margin: 0;
+     font-style: italic;
+    font-size: 30px;
+
 }
 
 .dianaLocal {
     text-align: center;
-    font-family: 'Baskervville';
-    font-style: italic;
+    font-family: 'Baskervville', serif;
     margin: 0;
+    font-size: 10px;
+    text-transform:uppercase;
 
 }
-
-
-
-.sideLogo {
-    background-image: url(img/logo_full_white.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 100%;
-    width: auto;
-    transform: rotate(90deg);
-}
-
-
 
 
 .scrollsign {
@@ -191,21 +182,66 @@ section {
 /*TRANSITION*/
 
 #transition1 {
-    background-color: #D3BBAF;
+    background-color: white;
     margin: 0;
+
 }
 
+.transition1 {
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: relative;
+    background-image: url(img/transition1.png);
+    background-size: cover;
+}
 #transition2 {
-    background-color: #A9C0C4;
+    background-color: white;
     margin: 0;
 }
+.transition2 {
+    background-size: contain;
+    width: 100%;
+    height: auto;
+}
 
+@supports (display:grid) {
+    .transition2{
+        grid-area: ImageT;
+    }
+    .decorText {
+        grid-area: textT;
+    }
+    #transition2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "ImageT textT";
+    }
+}
 #transition3 {
-    background-color: #BE9252;
+    background-color: white;
     margin: 0;
 }
 
+.transition3 {
+    background-size: contain;
+    width: 100%;
+    height: auto;
+}
 
+@supports (display:grid) {
+    .transition3{
+        grid-area: ImageT;
+    }
+
+    #transition3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "textT ImageT";
+    }
+}
 /*transition pages*/
 
 .decorText {
@@ -213,7 +249,7 @@ section {
     font-style: italic;
     font-size: 40px;
     text-align: left;
-    color: white;
+    color: black;
     padding: 50px;
 }
 
@@ -415,13 +451,7 @@ textarea {
         place-self: stretch;
     }
 
-    .contDetails {
-        grid-area: 1 / 2 / 4 / 4;
-        background-color: rgba(255, 255, 255, 0.9);
-        margin: 150px 100px;
-        text-align: center;
-        /*align-self: center;*/
-    }
+
 
     containerForm {
         display: grid;
@@ -498,12 +528,13 @@ textarea {
         margin: 0;
         padding: 120px 100px 50px;
         font-weight: 100;
+        text-align: center;
     }
 
     #galleryPage {
         display: grid;
         grid-area: galleryPage;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(3, auto);
         grid-gap: 3rem;
         /*general style*/
         padding: 20px;
@@ -513,7 +544,7 @@ textarea {
 }
 
 /*Lucci32*/
-}
+
 
 #arrowleft,
 #arrowright,
