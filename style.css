@@ -401,16 +401,19 @@ textarea {
 .contactMail {
     display: block;
     font-family: 'Baskervville', serif;
+           float: right;
 }
 
 .contactInsta {
     display: block;
     font-family: 'Baskervville', serif;
+           float: right;
 }
 
 .contactPhone {
     display: block;
     font-family: 'Baskervville', serif;
+           float: right;
 }
 
 /* Add a background color and some padding around the form */
@@ -458,13 +461,16 @@ textarea {
         grid-area: form;
     }
 
+    .contDetails {
+        grid-area: contD;
+    }
     #contactPage {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: 300px 1fr 200px;
         grid-template-areas: "contactT contImg"
             "form contImg"
-            "form contImg";
+            ". contD";
     }
 }
 
