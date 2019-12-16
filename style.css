@@ -52,6 +52,7 @@ body {
         background: rgba(255, 255, 255, 0.8);
         display: block;
     }
+
     .homemenu a:not(:first-child) {
         display: none;
     }
@@ -62,13 +63,13 @@ body {
     }
 
     .logo {
-    height: 0;
-    width: 0;
+        height: 0;
+        width: 0;
     }
 
     .aMiddle {
-    border-left-style: none;
-    border-right-style: none;
+        border-left-style: none;
+        border-right-style: none;
     }
 }
 
@@ -105,7 +106,7 @@ body {
     text-align: center;
     font-family: 'Baskervville', serif;
     margin: 0;
-     font-style: italic;
+    font-style: italic;
     font-size: 30px;
 
 }
@@ -115,7 +116,7 @@ body {
     font-family: 'Baskervville', serif;
     margin: 0;
     font-size: 10px;
-    text-transform:uppercase;
+    text-transform: uppercase;
 
 }
 
@@ -150,7 +151,8 @@ nav a {
     text-transform: uppercase;
     text-decoration: underline;
 }
-.aGallery{
+
+.aGallery {
     color: black;
     text-transform: capitalize;
     text-decoration: none;
@@ -159,6 +161,7 @@ nav a {
 #categoryMenu {
     text-align: left;
 }
+
 /*pages*/
 
 section {
@@ -206,50 +209,58 @@ section {
     background-image: url(img/transition1.png);
     background-size: cover;
 }
+
 #transition2 {
     background-color: white;
     margin: 0;
 }
+
 .transition2 {
-        width: 80%;
+    width: 80%;
     height: auto;
     padding: 40px;
 }
 
 @supports (display:grid) {
-    .transition2{
+    .transition2 {
         grid-area: ImageT;
     }
+
     .decorText {
         grid-area: textT;
     }
-    #transition2{
+
+    #transition2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: "ImageT textT";
     }
 }
+
 #transition3 {
     background-color: white;
     margin: 0;
 }
 
 .transition3 {
-       width: 80%;
+    width: 80%;
     height: auto;
     padding: 40px;
 }
- #transition1, #transition2, #transition3{
-        text-align: center;
-    }
+
+#transition1,
+#transition2,
+#transition3 {
+    text-align: center;
+}
 
 @supports (display:grid) {
-    .transition3{
+    .transition3 {
         grid-area: ImageT;
     }
 
-    #transition3{
+    #transition3 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -258,22 +269,29 @@ section {
 }
 
 @media screen and (max-width: 850px) {
-    #transition1, #transition2, #transition3{
+
+    #transition1,
+    #transition2,
+    #transition3 {
         display: block;
         text-align: center;
     }
-    .transition2, .transition3{
+
+    .transition2,
+    .transition3 {
         width: 100%;
         height: auto;
         padding: 0;
     }
+
     .transition1 {
         width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
+        height: auto;
+        display: block;
+        position: absolute;
     }
 }
+
 /*transition pages*/
 
 .decorText {
@@ -421,9 +439,10 @@ textarea {
     resize: none;
 }
 
-form{
+form {
     padding: 50px;
 }
+
 .containerForm label {
     font-family: 'Baskervville', serif;
     width: 100%;
@@ -433,32 +452,34 @@ form{
 
 }
 
-  .contact_img {
-        grid-area: contImg;
-        width: 80%;
-        height: auto;
-    }
+.contact_img {
+    grid-area: contImg;
+    width: 80%;
+    height: auto;
+}
+
 .contactMail {
     display: block;
     font-family: 'Baskervville', serif;
-           float: right;
+    float: right;
 }
 
 .contactInsta {
     display: block;
     font-family: 'Baskervville', serif;
-           float: right;
+    float: right;
 }
 
 .contactPhone {
     display: block;
     font-family: 'Baskervville', serif;
-           float: right;
+    float: right;
 }
 
 .contDetails {
     background-color: black;
 }
+
 .contDetails p {
     color: white;
 }
@@ -466,9 +487,11 @@ form{
 .contRights {
     color: white;
 }
-.rights{
+
+.rights {
     background-color: black;
 }
+
 /* Add a background color and some padding around the form */
 .containerForm {
     background-color: white;
@@ -479,11 +502,13 @@ form{
     font-family: 'Baskervville', serif;
 
 }
-    .logo2 {
+
+.logo2 {
     height: auto;
     width: 60px;
-        padding: 30px;
+    padding: 30px;
 }
+
 @supports (display:grid) {
     .contactTitle {
         grid-area: contactT;
@@ -503,6 +528,7 @@ form{
     .contactPhone {
         grid-area: contPhone;
     }
+
     .contactMail {
         grid-area: contMail;
     }
@@ -517,20 +543,21 @@ form{
         height: auto;
     }
 
- .contDetails {
+    .contDetails {
         display: grid;
         grid-area: contD;
-     text-align: right;
-     padding-right: 20px;
-  grid-template-columns: 1fr;
+        text-align: right;
+        padding-right: 20px;
+        grid-template-columns: 1fr;
         grid-template-areas: "contPhone"
             "contInsta"
             "contMail";
     }
 
     .contRights {
-    grid-area: rightsText;
-}
+        grid-area: rightsText;
+    }
+
     .logo2 {
         grid-area: logo;
     }
@@ -573,9 +600,9 @@ form{
     }
 
     .contact_img {
-    width: 100%;
-    height: auto;
-    padding: 20px;
+        width: 100%;
+        height: auto;
+        padding: 20px;
     }
 
     input[type=text],
@@ -600,7 +627,7 @@ form{
 
 
 .img_Gallery {
-        width: 300px;
+    width: 300px;
     height: 300px;
     object-fit: cover;
 }
@@ -636,6 +663,7 @@ form{
         padding: 20px;
         text-align: center;
     }
+
     .galleryText {
         padding: 20px;
     }
@@ -827,4 +855,206 @@ body {
 
 #page2 {
     background-color: #138762;
+}
+
+
+/*Lucci32*/
+
+#arrowleft,
+#arrowright,
+#artpaint {
+    max-width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    font-family: 'baskervville', serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+.container div {
+    display: grid;
+    place-items: center;
+}
+
+.left {
+    transform: translateY(-100vh);
+    animation: slidedown-anim 1.5s ease-in-out both;
+    background-color: #d3bbaf;
+    height: 100vh;
+}
+
+.left p {
+    /*font-family: 'baskervville', serif;*/
+    font-size: 60px;
+
+}
+
+@keyframes slidedown-anim {
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.left p,
+.paint {
+    animation: buttonleft-anim 3s;
+    text-align: center;
+    opacity: 1;
+    /*transform: matrix(1, 0, 0, 1, 0, 0);*/
+}
+
+@keyframes buttonleft-anim {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 0.1;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    65% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0.4;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    95% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.right p {
+    /*animation: buttonright-anim 4.5s ease-in-out both;*/
+    text-align: center;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    /*transform: translate(10px, 6px);
+     margin: 0 0 -6px -10px;*/
+}
+
+
+@keyframes buttonright-anim {
+    100% {
+        transform: translateX(0);
+    }
+
+    0% {
+        transform: translateX(100vh);
+    }
+}
+
+.right {
+    animation: slideup-anim 1.5s ease-in-out both;
+    background-color: white;
+}
+
+@keyframes slideup-anim {
+    0% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Gallery content*/
+/*.content {
+     animation: slideright-anim 4.5s ease-in-out both;
+     text-align: center;
+ }
+*/
+@keyframes slideright-anim {
+    100% {
+        transform: translateX(0);
+    }
+
+    0% {
+        transform: translateX(100vh);
+    }
+}
+
+.arrow-top-left {
+    width: 70px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.arrow-top-right {
+    width: 70px;
+    position: fixed;
+    text-align: right;
+    top: 0;
+    right: 0;
+    /*margin: -20px;
+     margin-left: 640px;*/
+    padding: 0;
+}
+
+#page2 {
+    background-color: #138762;
+}
+
+/*MODAL*/
+.hide {
+    display: none;
+}
+
+.modal-background {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 1em;
+    padding: 2em;
 }
