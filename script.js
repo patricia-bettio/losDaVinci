@@ -141,13 +141,8 @@ function manageModal(clickedLink) {
     let imageId = anchor.firstElementChild.getAttribute('id');
     //confirm: we are getting each post type image ID when clicking a single image
     console.log(imageId);
+    makeModalWithImage(imageId);
 }
-
-
-
-
-
-
 
 
 //SUBpage - when selecting ONE single image - individual painting details page - to be trasformed into a MODAL
