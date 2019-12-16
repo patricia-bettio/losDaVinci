@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Baskervville:400,400i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baskerville:400,400i&display=swap');
+@import url(//db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon/Milk);
 
 body {
     margin: 0;
@@ -8,7 +9,7 @@ body {
 
 .logo {
     height: auto;
-    width: 60px;
+    width: 70px;
 }
 
 .instaIcon {
@@ -21,7 +22,7 @@ body {
     overflow: hidden;
     align-items: center;
     background: rgba(255, 255, 255, 85%);
-    margin: 20px;
+    margin: 40px;
     padding: 10px;
     position: fixed;
     width: -webkit-fill-available;
@@ -30,9 +31,10 @@ body {
 
 .homemenu a {
     color: black;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 30px;
+    font-size: 14px;
 }
 
 .aMiddle {
@@ -98,13 +100,13 @@ body {
     text-align: center;
     font-size: 80px;
     margin: 0;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     line-height: 1em;
 }
 
 .dianaSub {
     text-align: center;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     margin: 0;
     font-style: italic;
     font-size: 30px;
@@ -113,8 +115,10 @@ body {
 
 .dianaLocal {
     text-align: center;
-    font-family: 'Baskervville', serif;
+    font-family: 'Lemon/Milk', serif;
+    font-weight: lighter;
     margin: 0;
+    margin-bottom: 30px;
     font-size: 10px;
     text-transform: uppercase;
 
@@ -128,7 +132,7 @@ body {
     top: 50%;
     margin: 40px;
     background-color: aqua;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
 }
 
 .homeimage {
@@ -144,11 +148,10 @@ body {
 
 nav a {
     text-decoration: none;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     padding: 5px;
     display: block;
     color: black;
-    text-transform: uppercase;
     text-decoration: underline;
 }
 
@@ -295,7 +298,7 @@ section {
 /*transition pages*/
 
 .decorText {
-    font-family: 'Baskervville';
+    font-family: 'Baskerville';
     font-style: italic;
     font-size: 25px;
     text-align: left;
@@ -315,19 +318,19 @@ section {
     color: black;
     margin: 0;
     padding: 0 100px;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
 }
 
 .aboutSub {
     color: black;
     margin: 0;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
 }
 
 .aboutTitle {
     color: black;
     margin: 0;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
 }
 
 .about_img {}
@@ -401,7 +404,7 @@ section {
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
     background-color: #c0d3d6;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -416,7 +419,7 @@ input[type=submit]:hover {
 input[type=text],
 select,
 textarea {
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     width: 100%;
     /* Full width */
     padding: 8px;
@@ -444,7 +447,7 @@ form {
 }
 
 .containerForm label {
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     width: 100%;
     margin-right: 100px;
     margin-left: auto;
@@ -460,20 +463,22 @@ form {
 
 .contactMail {
     display: block;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     float: right;
+    margin-bottom: 40px;
 }
 
 .contactInsta {
     display: block;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     float: right;
 }
 
 .contactPhone {
     display: block;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
     float: right;
+    margin-top: 40px;
 }
 
 .contDetails {
@@ -482,10 +487,12 @@ form {
 
 .contDetails p {
     color: white;
+    margin-right: 30px;
 }
 
 .contRights {
     color: white;
+    margin-left: 50px;
 }
 
 .rights {
@@ -499,20 +506,22 @@ form {
 
 .contactTitle {
     display: block;
-    font-family: 'Baskervville', serif;
+    font-family: 'Baskerville', serif;
 
 }
 
 .logo2 {
     height: auto;
     width: 60px;
-    padding: 30px;
+    padding: 10px;
+    margin-left: 40px;
+    margin-top: 40px;
 }
 
 @supports (display:grid) {
     .contactTitle {
         grid-area: contactT;
-        font-family: 'Baskervville', serif;
+        font-family: 'Baskerville', serif;
         align-content: center;
         font-size: 40px;
         margin: 0;
@@ -638,7 +647,7 @@ form {
 
 @supports (display:grid) {
     .galleryText {
-        font-family: 'Baskervville', serif;
+        font-family: 'Baskerville', serif;
         align-content: center;
         font-size: 40px;
         margin: 0;
@@ -683,7 +692,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-y: scroll;
-    font-family: 'baskervville', serif;
+    font-family: 'baskerville', serif;
 }
 
 .container {
