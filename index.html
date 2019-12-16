@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,136 +8,135 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-<nav class="homemenu" id="homemenu">
-      <img src="img/color_4.png" alt="" class="logo" >
-       <a href="#aboutSection">About</a>
-       <a href="#gallerySection" class="aMiddle">Gallery</a>
-       <a href="#contactPage">Contact</a>
-       <a href="https://www.instagram.com/sailjupiter/" target="_blank" class="instaIcon">INSTAGRAM</a>
-         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-   </nav>
-
-<section>
-<div class="content">
- <img alt="" class="homeimage">
-  <p class="dianaT">Diana Stroie</p>
-    <p class="dianaLocal">Painter based in Versailles, France</p>
-  <p class="dianaSub">Fullfilling the empty spaces of your home with paintings that inspire, provoke and awake true emotions.</p>
-
-<!--  <aside class="scrollsign">scroll down</aside>-->
-
-</div>
-</section>
-
-<section>
-<div class="content" id="transition1">
-   <img alt="" class="sideLogo"><p class="decorText">Mysterious places such as the Bucegi mountains and imaginary places like Atlantis.<br> They don’t have anything in common, but I’m fascinated by the stories «we» as humans, have created since the beginning of humanity.</p>
-</div>
-</section>
-
-<section id="aboutSection">
-<div class="content" id="aboutPage">
-  <template class="aboutTemplate">
-   <img class="about_img" src="" alt="">
-    <p class="aboutTitle">title here</p>
-<!--    <p class="aboutSub">title here</p>-->
-    <p class="aboutText">title here</p>
-</template>
-</div>
-</section>
-
-
-<section>
-<div class="content" id="transition2">
-    <p class="decorText">Mysterious places such as the Bucegi mountains and imaginary places like Atlantis.<br> They don’t have anything in common, but I’m fascinated by the stories «we» as humans, have created since the beginning of humanity.</p>
-    <img alt="" class="sideLogo">
-</div>
-</section>
-
-<section id="gallerySection">
-<h1 class="galleryText">creations</h1>
-<div class="content" id="galleryPage">
-
-
-    <template class="galleryTemplate">
-      <a href="#">
-          <img class="img_Gallery" src="" alt=""/>
-      </a>
-    </template>
-
-
-
-
-
-
-<!--  CATEGORY MENU  -->
-    <nav id="categoryMenu">
-        <a href="#gallerySection" class="aGallery">Gallery show all</a>
-
+    <nav class="homemenu" id="homemenu">
+        <img src="img/logo_final_white.png" alt="" class="logo">
+        <a href="#aboutSection">About</a>
+        <a href="#gallerySection" class="aMiddle">Gallery</a>
+        <a href="#contactPage">Contact</a>
+        <a href="https://www.instagram.com/sailjupiter/" target="_blank" class="instaIcon" style="color: #c0d3d6">INSTAGRAM</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
 
-</div>
-</section>
+    <section>
+        <div class="content">
+            <p class="dianaT">Diana Stroie</p>
+            <p class="dianaLocal">Transylvanian artist based in Versailles, France</p>
+            <p class="dianaSub">Fullfilling the empty spaces in your home with paintings that inspire,<br> provoke and awake true emotions</p>
+
+            <!--  <aside class="scrollsign">scroll down</aside>-->
+
+        </div>
+    </section>
+
+    <section>
+        <div class="content" id="transition1">
+            <img src="" alt="" class="transition1">
+        </div>
+    </section>
+
+    <section id="aboutSection">
+        <div class="content" id="aboutPage">
+            <template class="aboutTemplate">
+                <img class="about_img" src="" alt="">
+                <p class="aboutTitle">title here</p>
+                <!--    <p class="aboutSub">title here</p>-->
+                <p class="aboutText">title here</p>
+            </template>
+        </div>
+    </section>
 
 
-<section>
-<div class="content" id="transition3">
-    <p class="decorText">Mysterious places such as the Bucegi mountains and imaginary places like Atlantis.<br> They don’t have anything in common, but I’m fascinated by the stories «we» as humans, have created since the beginning of humanity.</p>
-    <img alt="" class="sideLogo">
-</div>
-</section>
+    <section>
+        <div class="content" id="transition2">
+            <img src="img/transition2.png" alt="" class="transition2">
+            <p class="decorText">"Artwork becomes autonomous as soon as it's finished.<br>The meaning belongs to whoever looks at it, regardless of what I wanted to depict."</p>
+        </div>
+    </section>
+
+    <section id="gallerySection">
+        <h1 class="galleryText">creations</h1>
+        <div class="content" id="galleryPage">
 
 
-<section id="contactSection">
-<div class="content" id="contactPage">
-   <h1 class="contactTitle">get in contact with Diana by filling out the form</h1>
-    <template class="contactTemplate">
-      <img class="contact_img" src="" alt="">
-      <div class="contDetails">
-       <p class="contactMail">title here</p>
-<!--    <p class="aboutSub">title here</p>-->
-    <p class="contactInsta">title here</p>
-    <p class="contactPhone">title here</p>
-    </div>
-</template>
-
-
-<div class="containerForm">
-  <form action="action_page.php">
-
-    <label for="fname">Full Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="email">E-mail address</label>
-    <input type="text" id="email" name="E-mail" placeholder="Your email address..">
-
-    <label for="subject">Subject</label>
-    <select id="subject" name="subject">
-      <option value="comission">Comissions</option>
-      <option value="buy">Buy a painting</option>
-      <option value="other">Other</option>
-    </select>
- <label for="titleF">Title</label>
-      <input type="text" id="titleForm" name="TitleForm" placeholder="Your title..">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write something.." style="height:80px"></textarea>
-
-    <input type="submit" value="Submit">
-
-  </form>
-</div>
-
-
-</div>
-</section>
+            <template class="galleryTemplate">
+                <a href="#">
+                    <img class="img_Gallery" src="" alt="" />
+                </a>
+            </template>
 
 
 
 
-<script src="script.js"></script>
+
+
+            <!--  CATEGORY MENU  -->
+            <nav id="categoryMenu">
+                <a href="#gallerySection" class="aGallery">Gallery show all</a>
+
+            </nav>
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="content" id="transition3">
+            <p class="decorText">Mysterious places such as the Bucegi mountains and imaginary places like Atlantis.<br> They don’t have anything in common, but I’m fascinated by the stories «we» as humans, have created since the beginning of humanity.</p>
+            <img src="img/transition3.png" alt="" class="transition3">
+        </div>
+    </section>
+
+
+    <section id="contactSection">
+        <div class="content" id="contactPage">
+            <h1 class="contactTitle">get in contact with Diana by filling out the form</h1>
+
+
+
+
+            <div class="containerForm">
+                <form action="action_page.php">
+
+                    <label for="fname">What is your name?</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="email">E-mail address</label>
+                    <input type="text" id="email" name="E-mail" placeholder="Your email address..">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
+
+                    <input type="submit" value="Submit">
+
+                </form>
+            </div>
+
+                      <template class="contactTemplate">
+                <img class="contact_img" src="" alt="">
+                <div class="contDetails">
+                    <p class="contactPhone">title here</p>
+                    <p class="contactInsta">title here</p>
+                    <p class="contactMail">title here</p>
+                </div>
+            </template>
+            <div class="rights">
+                <img src="img/logo_final_white2.png" class="logo2">
+                <p class="contRights">All rights reserved to Diana Stroie 2019</p>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -13,13 +13,14 @@ body {
 
 .instaIcon {
     margin-left: auto;
+    color: #c0d3d6;
 }
 
 .homemenu {
     display: flex;
     overflow: hidden;
     align-items: center;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 85%);
     margin: 20px;
     padding: 10px;
     position: fixed;
@@ -28,7 +29,6 @@ body {
 }
 
 .homemenu a {
-
     color: black;
     font-family: 'Baskervville', serif;
     text-decoration: none;
@@ -36,8 +36,8 @@ body {
 }
 
 .aMiddle {
-    border-left: 1px solid;
-    border-right: 1px solid;
+    border-left: 1px solid #c0d3d6;
+    border-right: 1px solid #c0d3d6;
 }
 
 
@@ -95,38 +95,29 @@ body {
 
 .dianaT {
     text-align: center;
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
     font-family: 'Baskervville', serif;
+    line-height: 1em;
 }
 
 .dianaSub {
     text-align: center;
     font-family: 'Baskervville', serif;
     margin: 0;
+     font-style: italic;
+    font-size: 30px;
+
 }
 
 .dianaLocal {
     text-align: center;
-    font-family: 'Baskervville';
-    font-style: italic;
+    font-family: 'Baskervville', serif;
     margin: 0;
+    font-size: 10px;
+    text-transform:uppercase;
 
 }
-
-
-
-.sideLogo {
-    background-image: url(img/logo_full_white.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 100%;
-    width: auto;
-    transform: rotate(90deg);
-}
-
-
 
 
 .scrollsign {
@@ -155,8 +146,19 @@ nav a {
     font-family: 'Baskervville', serif;
     padding: 5px;
     display: block;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.aGallery{
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
 }
 
+#categoryMenu {
+    text-align: left;
+}
 /*pages*/
 
 section {
@@ -173,6 +175,7 @@ section {
 .content {
     display: table-cell;
     vertical-align: middle;
+    margin: 0;
 }
 
 /*#pageHome, #pageFirstTransition, #pageAbout{
@@ -191,30 +194,96 @@ section {
 /*TRANSITION*/
 
 #transition1 {
-    background-color: #D3BBAF;
+    background-color: white;
     margin: 0;
 }
 
+.transition1 {
+    width: 100%;
+    height: 100%;
+    display: table;
+    position: relative;
+    background-image: url(img/transition1.png);
+    background-size: cover;
+}
 #transition2 {
-    background-color: #A9C0C4;
+    background-color: white;
     margin: 0;
 }
+.transition2 {
+        width: 80%;
+    height: auto;
+    padding: 40px;
+}
 
+@supports (display:grid) {
+    .transition2{
+        grid-area: ImageT;
+    }
+    .decorText {
+        grid-area: textT;
+    }
+    #transition2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "ImageT textT";
+    }
+}
 #transition3 {
-    background-color: #BE9252;
+    background-color: white;
     margin: 0;
 }
 
+.transition3 {
+       width: 80%;
+    height: auto;
+    padding: 40px;
+}
+ #transition1, #transition2, #transition3{
+        text-align: center;
+    }
 
+@supports (display:grid) {
+    .transition3{
+        grid-area: ImageT;
+    }
+
+    #transition3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "textT ImageT";
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #transition1, #transition2, #transition3{
+        display: block;
+        text-align: center;
+    }
+    .transition2, .transition3{
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .transition1 {
+        width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    }
+}
 /*transition pages*/
 
 .decorText {
     font-family: 'Baskervville';
     font-style: italic;
-    font-size: 40px;
+    font-size: 25px;
     text-align: left;
-    color: white;
+    color: black;
     padding: 50px;
+    align-self: center;
 }
 
 /* ABOUT PAGE*/
@@ -297,7 +366,7 @@ section {
     }
 
     .about_img {
-        height: inherit;
+        height: auto;
         width: 100%;
         position: relative;
         object-fit: fill;
@@ -313,25 +382,24 @@ section {
 /*CONTACT PAGE*/
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-    background-color: #BE9252;
+    background-color: #c0d3d6;
     font-family: 'Baskervville', serif;
     color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
-    margin-left: 100px;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: black;
 }
 
 input[type=text],
 select,
 textarea {
     font-family: 'Baskervville', serif;
-    width: 60%;
+    width: 100%;
     /* Full width */
     padding: 8px;
     /* Some padding */
@@ -341,7 +409,7 @@ textarea {
     /* Make sure that padding and width stays in place */
     margin-bottom: 5px;
     /* Bottom margin */
-    margin-left: 100px;
+    margin-left: 0;
     margin-right: auto;
     resize: vertical;
     /* Allow the user to vertically resize the textarea (not horizontally) */
@@ -353,30 +421,54 @@ textarea {
     resize: none;
 }
 
+form{
+    padding: 50px;
+}
 .containerForm label {
     font-family: 'Baskervville', serif;
-    width: 60%;
-    margin-left: 100px;
-    margin-right: auto;
+    width: 100%;
+    margin-right: 100px;
+    margin-left: auto;
     display: block;
 
 }
 
+  .contact_img {
+        grid-area: contImg;
+        width: 80%;
+        height: auto;
+    }
 .contactMail {
     display: block;
     font-family: 'Baskervville', serif;
+           float: right;
 }
 
 .contactInsta {
     display: block;
     font-family: 'Baskervville', serif;
+           float: right;
 }
 
 .contactPhone {
     display: block;
     font-family: 'Baskervville', serif;
+           float: right;
 }
 
+.contDetails {
+    background-color: black;
+}
+.contDetails p {
+    color: white;
+}
+
+.contRights {
+    color: white;
+}
+.rights{
+    background-color: black;
+}
 /* Add a background color and some padding around the form */
 .containerForm {
     background-color: white;
@@ -387,7 +479,11 @@ textarea {
     font-family: 'Baskervville', serif;
 
 }
-
+    .logo2 {
+    height: auto;
+    width: 60px;
+        padding: 30px;
+}
 @supports (display:grid) {
     .contactTitle {
         grid-area: contactT;
@@ -404,23 +500,46 @@ textarea {
         grid-area: form;
     }
 
-    p.contactMail {
-        grid-area: contD;
-        text-align: center;
+    .contactPhone {
+        grid-area: contPhone;
+    }
+    .contactMail {
+        grid-area: contMail;
+    }
+
+    .contactInsta {
+        grid-area: contInsta;
     }
 
     .contact_img {
         grid-area: contImg;
-        object-fit: cover;
-        place-self: stretch;
+        width: 80%;
+        height: auto;
     }
 
-    .contDetails {
-        grid-area: 1 / 2 / 4 / 4;
-        background-color: rgba(255, 255, 255, 0.9);
-        margin: 150px 100px;
-        text-align: center;
-        /*align-self: center;*/
+ .contDetails {
+        display: grid;
+        grid-area: contD;
+     text-align: right;
+     padding-right: 20px;
+  grid-template-columns: 1fr;
+        grid-template-areas: "contPhone"
+            "contInsta"
+            "contMail";
+    }
+
+    .contRights {
+    grid-area: rightsText;
+}
+    .logo2 {
+        grid-area: logo;
+    }
+
+    .rights {
+        display: grid;
+        grid-area: rights;
+        grid-template-areas: "logo"
+            "rightsText";
     }
 
     containerForm {
@@ -428,13 +547,14 @@ textarea {
         grid-area: form;
     }
 
+
     #contactPage {
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 300px 1fr 200px;
-        grid-template-areas: "contactT contImg"
-            "form contImg"
-            "form contImg";
+        grid-template-areas: "contImg contactT"
+            "contImg form"
+            "rights contD";
     }
 }
 
@@ -453,11 +573,9 @@ textarea {
     }
 
     .contact_img {
-
-        height: inherit;
-        width: 100%;
-        position: relative;
-        object-fit: fill;
+    width: 100%;
+    height: auto;
+    padding: 20px;
     }
 
     input[type=text],
@@ -482,12 +600,13 @@ textarea {
 
 
 .img_Gallery {
-    width: 100%;
-    height: auto;
+        width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 
 #galleryPage {
-    padding: 20px;
+    padding: 60px;
 }
 
 @supports (display:grid) {
@@ -498,22 +617,33 @@ textarea {
         margin: 0;
         padding: 120px 100px 50px;
         font-weight: 100;
+        text-align: center;
     }
 
     #galleryPage {
         display: grid;
         grid-area: galleryPage;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(3, auto);
         grid-gap: 3rem;
-        /*general style*/
-        padding: 20px;
         align-items: center;
         justify-content: center;
     }
 }
 
-/*Lucci32*/
+@media screen and (max-width: 850px) {
+    #galleryPage {
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+    .galleryText {
+        padding: 20px;
+    }
+
 }
+
+/*Lucci32*/
+
 
 #arrowleft,
 #arrowright,
