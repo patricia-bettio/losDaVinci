@@ -21,6 +21,10 @@ body {
     font-family: 'Lemon/Milk';
 }
 
+.instaIcon a:hover {
+    color: black;
+}
+
 .homemenu {
     display: flex;
     overflow: hidden;
@@ -39,6 +43,10 @@ body {
     text-decoration: none;
     padding: 10px 30px;
     font-size: 14px;
+}
+
+.homemenu a:hover {
+    color: darkolivegreen;
 }
 
 .aMiddle {
