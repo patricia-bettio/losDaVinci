@@ -15,6 +15,7 @@ body {
 .instaIcon {
     margin-left: auto;
     color: #c0d3d6;
+    text-transform: capitalize;
 }
 
 .homemenu {
@@ -132,7 +133,7 @@ body {
     position: absolute;
     top: 50%;
     margin: 40px;
-    background-color: aqua;
+    color: #c0d3d6;
     font-family: 'Baskerville', serif;
 }
 
@@ -377,7 +378,7 @@ section {
     }
 
     .aboutText {
-        padding: 20px;
+        padding: 0 60px 30px 60px;
     }
 
     .aboutSub {
@@ -385,7 +386,7 @@ section {
     }
 
     .aboutTitle {
-        padding: 20px;
+        padding: 30px 60px;
     }
 
     .about_img {
@@ -459,7 +460,7 @@ form {
 
 .contact_img {
     grid-area: contImg;
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
@@ -549,7 +550,7 @@ form {
 
     .contact_img {
         grid-area: contImg;
-        width: 80%;
+        width: 100%;
         height: auto;
     }
 
@@ -605,7 +606,7 @@ form {
     }
 
     .contactTitle {
-        padding: 20px;
+        padding: 40px 60px 20px 70px;
         font-size: 25px;
     }
 
