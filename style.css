@@ -58,7 +58,7 @@ body {
     font-style: italic;
     cursor: pointer;
     margin-top: 40px;
-    display: flex;
+    display: inline-block;
     justify-content: center;
 }
 
@@ -354,7 +354,12 @@ section {
     font-family: 'Baskerville', serif;
 }
 
-.about_img {}
+.about_img {
+    height: auto;
+    width: 100%;
+    position: relative;
+
+}
 
 @supports (display:grid) {
 
@@ -409,10 +414,10 @@ section {
     }
 
     .about_img {
+        grid-area: aboutImg;
         height: auto;
         width: 100%;
         position: relative;
-        object-fit: fill;
     }
 
     /*TRANSITIONS*/
@@ -465,7 +470,7 @@ textarea {
 }
 
 form {
-    padding: 50px;
+    padding: 100px;
 }
 
 .containerForm label {
@@ -529,6 +534,7 @@ form {
 .contactTitle {
     display: block;
     font-family: 'Baskerville', serif;
+    padding: 50px 100px;
 }
 
 .logo2 {
@@ -545,10 +551,11 @@ form {
         font-family: 'Baskerville', serif;
         font-size: 40px;
         margin: 0;
-        padding: 120px 150px 120px 45px;
+        padding: 50px 100px;
         font-weight: 100;
         font-style: italic;
         color: #c0d3d6;
+        margin-top: 70px;
     }
 
     .containerForm {
@@ -625,7 +632,7 @@ form {
     }
 
     .contactTitle {
-        padding: 40px 60px 20px 70px;
+        padding: 50px 100px;
         font-size: 25px;
     }
 
