@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Baskerville:400,400i&display=swap');
 @import url(//db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon/Milk);
 
+html {
+    scroll-behavior: smooth-scroll;
+}
+
 body {
     margin: 0;
 }
-
-
 
 .logo {
     height: auto;
@@ -15,7 +17,8 @@ body {
 .instaIcon {
     margin-left: auto;
     color: #c0d3d6;
-    text-transform: capitalize;
+    text-transform: lowercase;
+    font-family: 'Lemon/Milk';
 }
 
 .homemenu {
@@ -46,6 +49,24 @@ body {
 
 .homemenu .icon {
     display: none;
+}
+
+.galleryBtn {
+    background-color: #c0d3d6;
+    padding: 10px 80px;
+    font-family: 'Baskerville', serif;
+    font-style: italic;
+    cursor: pointer;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.galleryBtn a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    text-transform: capitalize;
 }
 
 
@@ -94,8 +115,6 @@ body {
         display: block;
     }
 }
-
-
 
 
 .dianaT {
