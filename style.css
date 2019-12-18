@@ -787,11 +787,6 @@ body {
     height: 100vh;
 }
 
-.left p {
-    /*font-family: 'baskervville', serif;*/
-    font-size: 60px;
-
-}
 
 @keyframes slidedown-anim {
     100% {
@@ -959,6 +954,7 @@ body {
     height: 50vh;
 }
 
+
 @media (min-width:800px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
@@ -969,4 +965,28 @@ body {
     }
 }
 
-/*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*
+/*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+
+
+.modalContent {
+ font-size: 20px;
+    font-family: 'Baskerville', serif;
+}
+
+.modalTitle {
+     font-size: 40px;
+    font-family: 'Baskerville', serif;
+}
+
+.dimensions {
+ font-size: 20px;
+    font-family: 'Baskerville', serif;
+    color: white;
+    font-style: italic;
+}
+.materials {
+ font-size: 20px;
+    font-family: 'Baskerville', serif;
+    color: white;
+    font-style: italic;
+}

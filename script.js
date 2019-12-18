@@ -164,8 +164,17 @@ function makeModalWithImage(id) {
         //const templateG = document.querySelector(".container").content;
         //  const galleryCopy = templateG.cloneNode(true);
 
-        const pTitle = document.querySelector(".left p");
-        pTitle.innerHTML = modalContent.title.rendered;
+        const modalTitle = document.querySelector(".modalTitle");
+        modalTitle.innerHTML = modalContent.title.rendered;
+
+        const modalCont = document.querySelector(".modalContent");
+        modalCont.innerHTML = modalContent.content.rendered;
+
+        const dimension = document.querySelector(".dimensions");
+        dimension.textContent = modalContent.img_dimensions;
+
+        const materials = document.querySelector(".materials");
+        materials.textContent = modalContent.img_material;
 
         //image
         const imgPath = modalContent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
