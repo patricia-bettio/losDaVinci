@@ -30,7 +30,7 @@ body {
     padding: 10px;
     position: fixed;
     width: -webkit-fill-available;
-    z-index: 1000;
+    z-index: 5;
 }
 
 .homemenu a {
