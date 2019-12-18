@@ -710,6 +710,7 @@ form {
 
 /*Lucci32*/
 
+
 #arrowleft,
 #arrowright,
 #artpaint {
@@ -720,12 +721,13 @@ body {
     padding: 0;
     margin: 0;
     overflow-y: scroll;
-    font-family: 'baskerville', serif;
+    font-family: 'baskervville', serif;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    /*    grid-template-columns: repeat(2, 1fr);*/
     overflow: hidden;
 }
 
@@ -738,7 +740,7 @@ body {
     transform: translateY(-100vh);
     animation: slidedown-anim 1.5s ease-in-out both;
     background-color: #c0d3d6;
-    /*    height: 100vh;*/
+    height: 100vh;
 }
 
 .left p {
@@ -864,7 +866,6 @@ body {
     }
 }
 
-/*
 .arrow-top-left {
     width: 70px;
     position: fixed;
@@ -879,11 +880,10 @@ body {
     text-align: right;
     top: 0;
     right: 0;
-    margin: -20px;
-     margin-left: 640px;
+    /*margin: -20px;
+     margin-left: 640px;*/
     padding: 0;
 }
-*/
 
 #page2 {
     background-color: #138762;
@@ -915,7 +915,6 @@ body {
     height: 50vh;
 }
 
-
 @media (min-width:800px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
@@ -925,3 +924,5 @@ body {
         height: 100vh;
     }
 }
+
+/*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*
