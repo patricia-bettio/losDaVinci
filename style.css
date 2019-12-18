@@ -738,7 +738,7 @@ body {
     transform: translateY(-100vh);
     animation: slidedown-anim 1.5s ease-in-out both;
     background-color: #c0d3d6;
-/*    height: 100vh;*/
+    /*    height: 100vh;*/
 }
 
 .left p {
@@ -864,6 +864,7 @@ body {
     }
 }
 
+/*
 .arrow-top-left {
     width: 70px;
     position: fixed;
@@ -878,10 +879,11 @@ body {
     text-align: right;
     top: 0;
     right: 0;
-    /*margin: -20px;
-     margin-left: 640px;*/
+    margin: -20px;
+     margin-left: 640px;
     padding: 0;
 }
+*/
 
 #page2 {
     background-color: #138762;
