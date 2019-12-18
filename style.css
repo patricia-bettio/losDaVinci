@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Baskervville:400,400i&display=swap');
 
-body {
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    z-index: -1;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+}
 
 
 .logo {
@@ -23,9 +32,11 @@ body {
     background: rgba(255, 255, 255, 85%);
     margin: 20px;
     padding: 10px;
-    position: fixed;
+    /*    position: fixed;*/
+    position: sticky;
+    top: 20px;
     width: -webkit-fill-available;
-    z-index: 1000;
+    z-index: -1;
 }
 
 .homemenu a {
@@ -167,17 +178,23 @@ nav a {
 section {
     width: 100%;
     padding: 0;
-    display: table;
+    /*    display: table;*/
     margin: 0;
     max-width: none;
-    height: 100vh;
-    z-index: 1;
+    /*    height: 100vh;*/
+    z-index: -5;
+    position: relative;
+}
 
+#gallerySection {
+    z-index: 5;
 }
 
 .content {
+    /*
     display: table-cell;
     vertical-align: middle;
+*/
     margin: 0;
 }
 
@@ -314,7 +331,7 @@ section {
 .aboutText {
     color: black;
     margin: 0;
-    padding: 0 100px;
+    /*padding: 0 100px;*/
     font-family: 'Baskervville', serif;
 }
 
@@ -330,7 +347,6 @@ section {
     font-family: 'Baskervville', serif;
 }
 
-.about_img {}
 
 @supports (display:grid) {
 
@@ -338,7 +354,7 @@ section {
         grid-area: aboutT;
         align-content: center;
         font-size: 40px;
-        padding: 150px 100px 0;
+        /*        padding: 150px 100px 0;*/
     }
 
     .aboutText {
@@ -348,16 +364,20 @@ section {
 
     .about_img {
         grid-area: aboutImg;
+        /*
         object-fit: fill;
         place-self: stretch;
+*/
     }
 
     #aboutPage {
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 56% 40%;
         grid-template-areas:
-            "aboutT aboutImg"
+            "aboutT aboutT"
             "aboutTxt aboutImg";
+        grid-gap: 4%;
+        margin: 0 4%;
     }
 
 }
@@ -380,14 +400,14 @@ section {
     }
 
     .aboutTitle {
-        padding: 20px;
+        /*        padding: 20px;*/
     }
 
     .about_img {
         height: auto;
         width: 100%;
         position: relative;
-        object-fit: fill;
+        /*        object-fit: fill;*/
     }
 
     /*TRANSITIONS*/
@@ -688,7 +708,8 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    /*    grid-template-columns: repeat(2, 1fr);*/
     overflow: hidden;
 }
 
@@ -871,3 +892,19 @@ body {
     margin: 1em;
     padding: 2em;
 }
+
+.container div {
+    height: 50vh;
+}
+
+@media (min-width:800px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container div {
+        height: 100vh;
+    }
+}
+
+/*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*

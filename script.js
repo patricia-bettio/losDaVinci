@@ -97,6 +97,7 @@ function showGallery(jsonObj) {
 
         // Store image info in variable
         const imgPath = e._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url
+        console.log(e._embedded["wp:featuredmedia"][0].media_details.sizes)
 
         // Store the template itself in a variable
         const templateG = document.querySelector(".galleryTemplate").content
