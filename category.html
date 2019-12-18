@@ -59,7 +59,7 @@
     </section>
 
     <section id="gallerySection">
-        <h1 class="galleryText">creations</h1>
+        <h1 class="galleryText">gallery</h1>
         <div class="content" id="galleryPage">
 
             <template class="galleryTemplate">
@@ -97,7 +97,7 @@
 
 
 
-            <div class="containerForm">
+             <div class="containerForm">
                 <form action="action_page.php">
 
                     <label for="fname">What is your name?</label>
@@ -105,6 +105,13 @@
 
                     <label for="email">E-mail address</label>
                     <input type="text" id="email" name="E-mail" placeholder="Your email address..">
+
+                    <label for="artNumber">Selected Art</label>
+    <select id="artSelect" name="artSelect">
+      <option value="painting1">painting1</option>
+      <option value="painting2">painting2</option>
+      <option value="painting3">painting3</option>
+    </select>
 
                     <label for="subject">Subject</label>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px"></textarea>
@@ -134,14 +141,17 @@
     <div class="modal-background hide">
         <div class="container">
 
-            <div class="left">
-                <p>Work in progress. Out of my comfort zone with.</p>
-            </div>
-
             <div class="right">
                 <p>
                     <img id="artpaint" class="paint" src="" alt="paint">
                 </p>
+            </div>
+
+            <div class="left">
+               <p class="modalTitle"></p>
+                <p class="modalContent">Work in progress. Out of my comfort zone with.</p>
+                <p class="dimensions"></p>
+                <p class="materials"></p>
             </div>
         </div>
     </div>
