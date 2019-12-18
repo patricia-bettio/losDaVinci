@@ -908,3 +908,13 @@ body {
     margin: 1em;
     padding: 2em;
 }
+
+@media (min-width:800px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container div {
+        height: 100vh;
+    }
+}
