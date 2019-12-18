@@ -30,7 +30,7 @@ body {
     padding: 10px;
     position: fixed;
     width: -webkit-fill-available;
-    z-index: 1000;
+    z-index: 5;
 }
 
 .homemenu a {
@@ -710,6 +710,7 @@ form {
 
 /*Lucci32*/
 
+
 #arrowleft,
 #arrowright,
 #artpaint {
@@ -720,12 +721,13 @@ body {
     padding: 0;
     margin: 0;
     overflow-y: scroll;
-    font-family: 'baskerville', serif;
+    font-family: 'baskervville', serif;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    /*    grid-template-columns: repeat(2, 1fr);*/
     overflow: hidden;
 }
 
@@ -908,3 +910,19 @@ body {
     margin: 1em;
     padding: 2em;
 }
+
+.container div {
+    height: 50vh;
+}
+
+@media (min-width:800px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container div {
+        height: 100vh;
+    }
+}
+
+/*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*
