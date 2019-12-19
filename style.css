@@ -1074,6 +1074,9 @@ body {
 
 @media (max-width:800px) {
 
+    .container div {
+        display: inline;
+    }
     .paint {
         max-height: 300px;
     }
