@@ -1073,18 +1073,28 @@ body {
 }
 
 @media (max-width:800px) {
+    #artpaint {
+        max-width: 85%;
+    }
 
     .container div {
-        display: inline;
+        display: grid;
     }
     .paint {
         max-height: 300px;
     }
+    .left {
+        position: inherit;
+    }
+
+    .left p {
+        margin: 0 10px;
+    }
 
     .modalContent {
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'Baskerville', serif;
-        margin: 20px 50px;
+        margin: 5px;
     }
 
     .modalTitle {
