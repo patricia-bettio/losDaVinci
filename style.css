@@ -661,7 +661,7 @@ form {
     }
 
     .contactTitle {
-        padding: 20px;
+        padding: 20px 60px;
         font-size: 30px;
     }
 
@@ -681,8 +681,9 @@ form {
     }
 
     input[type=submit] {
-        margin: 5px 20px;
+        margin: 10px 20px;
         font-size: 18px;
+        padding-bottom: 20px;
     }
 
     .containerForm label {
@@ -692,7 +693,7 @@ form {
     }
 
     form{
-        padding: 0;
+        padding: 30px 40px;
     }
 }
 
