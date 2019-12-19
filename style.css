@@ -127,6 +127,7 @@ body {
 }
 
 
+
 .dianaT {
     text-align: center;
     font-size: 80px;
@@ -156,15 +157,36 @@ body {
 }
 
 
-.scrollsign {
-    transform: rotate(270deg);
-    transform-origin: top left;
-    position: absolute;
-    top: 50%;
-    margin: 40px;
-    color: #c0d3d6;
-    font-family: 'Baskerville', serif;
+@media (max-width: 850px) {
+    .dianaT {
+        text-align: center;
+        font-size: 60px;
+        margin: 0;
+        font-family: 'Baskerville', serif;
+        line-height: 1em;
+    }
+
+    .dianaSub {
+        text-align: center;
+        font-family: 'Baskerville', serif;
+        margin: 20px;
+        font-style: italic;
+        font-size: 20px;
+    
+    }
+    
+    .dianaLocal {
+        text-align: center;
+        font-family: 'Lemon/Milk', serif;
+        font-weight: lighter;
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 8px;
+        text-transform: uppercase;
+    
+    }
 }
+
 
 .homeimage {
     height: 35%;
