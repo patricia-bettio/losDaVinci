@@ -147,6 +147,36 @@ body {
 
 }
 
+@media (max-width: 850px) {
+    .dianaT {
+        text-align: center;
+        font-size: 60px;
+        margin: 0;
+        font-family: 'Baskerville', serif;
+        line-height: 1em;
+    }
+
+    .dianaSub {
+        text-align: center;
+        font-family: 'Baskerville', serif;
+        margin: 20px;
+        font-style: italic;
+        font-size: 20px;
+    
+    }
+    
+    .dianaLocal {
+        text-align: center;
+        font-family: 'Lemon/Milk', serif;
+        font-weight: lighter;
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 8px;
+        text-transform: uppercase;
+    
+    }
+}
+
 
 .scrollsign {
     transform: rotate(270deg);
@@ -538,12 +568,14 @@ form {
 .contDetails p {
     color: white;
     margin-right: 30px;
+    font-size: 12px;
 }
 
 .contRights {
     color: white;
     margin-left: 50px;
     text-align: left;
+    font-size: 12px;
 }
 
 .rights {
@@ -661,7 +693,7 @@ form {
     }
 
     .contactTitle {
-        padding: 20px;
+        padding: 20px 60px;
         font-size: 30px;
     }
 
@@ -681,8 +713,9 @@ form {
     }
 
     input[type=submit] {
-        margin: 5px 20px;
+        margin: 10px 20px;
         font-size: 18px;
+        padding-bottom: 20px;
     }
 
     .containerForm label {
@@ -692,7 +725,7 @@ form {
     }
 
     form{
-        padding: 0;
+        padding: 30px 40px;
     }
 }
 
