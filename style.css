@@ -1002,6 +1002,10 @@ body {
     height: 50vh;
 }
 
+.cart {
+    height: 40px;
+}
+
 
 @media (min-width:800px) {
     .container {
@@ -1073,6 +1077,9 @@ body {
 }
 
 @media (max-width:800px) {
+    .cart {
+    height: 20px;
+}
     #artpaint {
         max-width: 85%;
     }
