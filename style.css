@@ -1074,6 +1074,10 @@ body {
 
 @media (max-width:800px) {
 
+    .container div{
+        display: block;
+    }
+
     .modalContent {
         font-size: 15px;
         font-family: 'Baskerville', serif;
