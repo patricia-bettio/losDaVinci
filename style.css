@@ -155,6 +155,36 @@ body {
 
 }
 
+@media (max-width: 850px) {
+    .dianaT {
+        text-align: center;
+        font-size: 60px;
+        margin: 0;
+        font-family: 'Baskerville', serif;
+        line-height: 1em;
+    }
+
+    .dianaSub {
+        text-align: center;
+        font-family: 'Baskerville', serif;
+        margin: 20px;
+        font-style: italic;
+        font-size: 20px;
+    
+    }
+    
+    .dianaLocal {
+        text-align: center;
+        font-family: 'Lemon/Milk', serif;
+        font-weight: lighter;
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 8px;
+        text-transform: uppercase;
+    
+    }
+}
+
 
 .scrollsign {
     transform: rotate(270deg);
@@ -438,7 +468,7 @@ section {
     }
 
     .aboutText {
-        padding: 0 20px;
+        padding: 20px 50px;
     }
 
     .aboutSub {
@@ -446,7 +476,7 @@ section {
     }
 
     .aboutTitle {
-        padding: 20px;
+        padding: 20px 50px;
         margin-top: 0;
     }
 
@@ -461,7 +491,7 @@ section {
     /*TRANSITIONS*/
     .decorText {
         font-size: 30px;
-        padding: 20px;
+        padding: 20px 35px;
     }
 }
 
@@ -549,12 +579,14 @@ form {
 .contDetails p {
     color: white;
     margin-right: 30px;
+    font-size: 12px;
 }
 
 .contRights {
     color: white;
     margin-left: 50px;
     text-align: left;
+    font-size: 12px;
 }
 
 .rights {
@@ -672,7 +704,7 @@ form {
     }
 
     .contactTitle {
-        padding: 20px;
+        padding: 20px 60px;
         font-size: 30px;
     }
 
@@ -692,8 +724,9 @@ form {
     }
 
     input[type=submit] {
-        margin: 5px 20px;
+        margin: 10px 20px;
         font-size: 18px;
+        padding-bottom: 20px;
     }
 
     .containerForm label {
@@ -702,8 +735,8 @@ form {
         max-width: 80%;
     }
 
-    form {
-        padding: 0;
+    form{
+        padding: 30px 40px;
     }
 }
 
@@ -999,13 +1032,18 @@ body {
 
 
 .modalContent {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Baskerville', serif;
+    margin: 40px 80px;
+    color: black;
 }
 
 .modalTitle {
-    font-size: 40px;
+    font-size: 60px;
     font-family: 'Baskerville', serif;
+    padding-top: 20px;
+    font-style: italic;
+    color: white;
 }
 
 .dimensions {
@@ -1030,4 +1068,14 @@ body {
     position: static;
     font-size: 20px;
     padding: 1px;
+  
+@media (max-width:800px) {
+
+    .modalTitle {
+        font-size: 50px;
+        font-family: 'Baskerville', serif;
+        padding-top: 20px;
+        font-style: italic;
+        color: white;
+    }
 }
