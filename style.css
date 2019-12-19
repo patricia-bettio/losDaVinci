@@ -1003,6 +1003,7 @@ body {
 .modalContent {
     font-size: 20px;
     font-family: 'Baskerville', serif;
+    margin: 40px 80px;
 }
 
 .modalTitle {
@@ -1038,11 +1039,41 @@ body {
 
 @media (max-width:800px) {
 
-    .modalTitle {
-        font-size: 50px;
+    .modalContent {
+        font-size: 10px;
         font-family: 'Baskerville', serif;
-        padding-top: 20px;
+        margin: 20px 50px;
+    }
+
+    .modalTitle {
+        font-size: 20px;
+        font-family: 'Baskerville', serif;
+        padding-top: 5px;
         font-style: italic;
         color: white;
+    }
+
+    .dimensions {
+        font-size: 20px;
+        font-family: 'Baskerville', serif;
+        color: white;
+        font-style: italic;
+    }
+    
+    .materials {
+        font-size: 20px;
+        font-family: 'Baskerville', serif;
+        color: white;
+        font-style: italic;
+    }
+    
+    .button-modal {
+        background-color: #c0d3d6;
+        border: none;
+        margin-top: 0;
+        margin-right: -700px;
+        position: static;
+        font-size: 20px;
+        padding: 1px;
     }
 }
