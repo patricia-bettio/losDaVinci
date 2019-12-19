@@ -1072,14 +1072,15 @@ form {
         position: static;
         font-size: 20px;
         padding: 1px;
+    }
 
-        @media (max-width:800px) {
+    @media (max-width:800px) {
 
-            .modalTitle {
-                font-size: 50px;
-                font-family: 'Baskerville', serif;
-                padding-top: 20px;
-                font-style: italic;
-                color: white;
-            }
+        .modalTitle {
+            font-size: 50px;
+            font-family: 'Baskerville', serif;
+            padding-top: 20px;
+            font-style: italic;
+            color: white;
         }
+    }
