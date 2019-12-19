@@ -42,6 +42,10 @@ body {
     font-size: 14px;
 }
 
+.homemenu a:hover {
+    color: #c0d3d6;
+}
+
 .aMiddle {
     border-left: 1px solid #c0d3d6;
     border-right: 1px solid #c0d3d6;
@@ -146,6 +150,7 @@ body {
     text-transform: uppercase;
 
 }
+
 
 @media (max-width: 850px) {
     .dianaT {
@@ -1027,6 +1032,16 @@ body {
     font-family: 'Baskerville', serif;
     color: white;
     font-style: italic;
+}
+
+.button-modal {
+    background-color: #c0d3d6;
+    border: none;
+    margin-top: 0;
+    margin-right: -700px;
+    position: static;
+    font-size: 20px;
+    padding: 1px;
 }
 
 @media (max-width:800px) {
