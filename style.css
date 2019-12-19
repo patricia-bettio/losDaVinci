@@ -22,6 +22,10 @@ body {
     font-family: 'Lemon/Milk';
 }
 
+.instaIcon a:hover {
+    color: black;
+}
+
 .homemenu {
     display: flex;
     overflow: hidden;
@@ -32,6 +36,10 @@ body {
     position: fixed;
     width: -webkit-fill-available;
     z-index: 5;
+}
+
+.homemenu a:hover {
+    color: #c0d3d6;
 }
 
 .homemenu a {
@@ -1005,6 +1013,25 @@ body {
     .container div {
         height: 100vh;
     }
+
+    .button-modal {
+        display: block;
+        width: 30px;
+        height: 30px;
+        z-index: 12;
+        margin-top: 0;
+        overflow: auto;
+    }
+
+    /*
+    .container .left {
+        height: 100vh;
+    }
+
+    .modalContent {
+        height: 100vh;
+    }
+*/
 }
 
 /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
@@ -1039,6 +1066,15 @@ body {
     font-style: italic;
 }
 
+.button-modal {
+    background-color: #c0d3d6;
+    border: none;
+    margin-top: 0;
+    margin-right: -700px;
+    position: static;
+    font-size: 20px;
+    padding: 1px;
+  
 @media (max-width:800px) {
 
     .modalTitle {
