@@ -427,7 +427,7 @@ section {
     }
 
     .aboutText {
-        padding: 0 20px;
+        padding: 20px 50px;
     }
 
     .aboutSub {
@@ -435,7 +435,7 @@ section {
     }
 
     .aboutTitle {
-        padding: 20px;
+        padding: 20px 50px;
         margin-top: 0;
     }
 
@@ -450,7 +450,7 @@ section {
     /*TRANSITIONS*/
     .decorText {
         font-size: 30px;
-        padding: 20px;
+        padding: 20px 35px;
     }
 }
 
@@ -969,24 +969,40 @@ body {
 
 
 .modalContent {
- font-size: 20px;
+    font-size: 25px;
     font-family: 'Baskerville', serif;
+    margin: 40px 80px;
+    color: black;
 }
 
 .modalTitle {
-     font-size: 40px;
+    font-size: 60px;
     font-family: 'Baskerville', serif;
+    padding-top: 20px;
+    font-style: italic;
+    color: white;
 }
 
 .dimensions {
- font-size: 20px;
+    font-size: 20px;
     font-family: 'Baskerville', serif;
     color: white;
     font-style: italic;
 }
 .materials {
- font-size: 20px;
+    font-size: 20px;
     font-family: 'Baskerville', serif;
     color: white;
     font-style: italic;
+}
+
+@media (max-width:800px) {
+
+    .modalTitle {
+        font-size: 50px;
+        font-family: 'Baskerville', serif;
+        padding-top: 20px;
+        font-style: italic;
+        color: white;
+    }
 }
