@@ -190,11 +190,12 @@ nav a {
 }
 
 @media screen and (max-width: 850px) {
-    .scrollsign{
+    .scrollsign {
         top: 30%;
         margin: 0;
     }
 }
+
 /*pages*/
 
 section {
@@ -231,7 +232,7 @@ section {
 }
 
 .transition1 {
-   width: 100%;
+    width: 100%;
     max-height: 100vh;
     justify-content: center;
     justify-self: center;
@@ -305,11 +306,12 @@ section {
 
     .transition1 {
         width: 90%;
-    max-height: 100vh;
-    margin: auto;
-    justify-content: center;
-    justify-self: center;
+        max-height: 100vh;
+        margin: auto;
+        justify-content: center;
+        justify-self: center;
     }
+
     #transition2,
     #transition3 {
         display: block;
@@ -318,11 +320,11 @@ section {
 
     .transition2,
     .transition3 {
-            width: 90%;
-    max-height: 100vh;
-    margin: auto;
-    justify-content: center;
-    justify-self: center;
+        width: 90%;
+        max-height: 100vh;
+        margin: auto;
+        justify-content: center;
+        justify-self: center;
     }
 
     .transition1 {
@@ -331,6 +333,7 @@ section {
         display: block;
         position: absolute;
     }
+
     /*category menu*/
     nav a {
         padding: 20px;
@@ -383,12 +386,12 @@ section {
         grid-area: aboutT;
         align-content: center;
         font-size: 60px;
-    margin: 0;
-    padding: 50px 100px 0;
-    font-weight: 100;
-    font-style: italic;
-    color: #c0d3d6;
-    margin-top: 80px;
+        margin: 0;
+        padding: 50px 100px 0;
+        font-weight: 100;
+        font-style: italic;
+        color: #c0d3d6;
+        margin-top: 80px;
         text-align: left;
     }
 
@@ -401,10 +404,10 @@ section {
     .about_img {
         grid-area: aboutImg;
         width: 80%;
-    max-height: 100vh;
+        max-height: 100vh;
         margin: 50px;
-    justify-content: center;
-    justify-self: center;
+        justify-content: center;
+        justify-self: center;
     }
 
     #aboutPage {
@@ -441,10 +444,10 @@ section {
 
     .about_img {
         width: 90%;
-    max-height: 100vh;
-    margin: auto;
-    justify-content: center;
-    justify-self: center;
+        max-height: 100vh;
+        margin: auto;
+        justify-content: center;
+        justify-self: center;
     }
 
     /*TRANSITIONS*/
@@ -576,7 +579,7 @@ form {
         font-size: 40px;
         margin: 0;
         padding: 40px;
-/*        padding: 50px 100px;*/
+        /*        padding: 50px 100px;*/
         font-weight: 100;
         font-style: italic;
         color: #c0d3d6;
@@ -605,8 +608,8 @@ form {
         width: 80%;
         max-height: 100vh;
         margin: 50px;
-    justify-content: center;
-    justify-self: center;
+        justify-content: center;
+        justify-self: center;
     }
 
     .contDetails {
@@ -666,11 +669,11 @@ form {
     }
 
     .contact_img {
-          width: 90%;
-    max-height: 100vh;
-    margin: auto;
-    justify-content: center;
-    justify-self: center;
+        width: 90%;
+        max-height: 100vh;
+        margin: auto;
+        justify-content: center;
+        justify-self: center;
     }
 
     input[type=text],
@@ -691,7 +694,7 @@ form {
         max-width: 80%;
     }
 
-    form{
+    form {
         padding: 0;
     }
 }
@@ -733,8 +736,8 @@ form {
 
 @media screen and (max-width: 850px) {
     #galleryPage {
-            display: block;
-    text-align: center;
+        display: block;
+        text-align: center;
         margin: 0;
         padding: 0;
     }
@@ -963,29 +966,40 @@ body {
     .container div {
         height: 100vh;
     }
+
+    /*
+    .container .left {
+        height: 100vh;
+    }
+
+    .modalContent {
+        height: 100vh;
+    }
+*/
 }
 
 /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
 
 
 .modalContent {
- font-size: 20px;
+    font-size: 20px;
     font-family: 'Baskerville', serif;
 }
 
 .modalTitle {
-     font-size: 40px;
+    font-size: 40px;
     font-family: 'Baskerville', serif;
 }
 
 .dimensions {
- font-size: 20px;
+    font-size: 20px;
     font-family: 'Baskerville', serif;
     color: white;
     font-style: italic;
 }
+
 .materials {
- font-size: 20px;
+    font-size: 20px;
     font-family: 'Baskerville', serif;
     color: white;
     font-style: italic;
