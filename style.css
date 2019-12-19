@@ -1022,11 +1022,15 @@ body {
 .modalContent {
     font-size: 20px;
     font-family: 'Baskerville', serif;
+    margin: 40px 80px;
 }
 
 .modalTitle {
     font-size: 40px;
     font-family: 'Baskerville', serif;
+    color: white;
+    font-style: italic;
+    padding-top: 20px;
 }
 
 .dimensions {
@@ -1051,4 +1055,15 @@ body {
     position: static;
     font-size: 20px;
     padding: 1px;
+}
+
+@media (max-width:800px) {
+
+    .modalTitle {
+        font-size: 50px;
+        font-family: 'Baskerville', serif;
+        padding-top: 20px;
+        font-style: italic;
+        color: white;
+    }
 }
