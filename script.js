@@ -177,10 +177,12 @@ function makeModalWithImage(id) {
         materials.textContent = modalContent.img_material;
 
         //image
-        const imgPath = modalContent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+      /*  const imgPath = modalContent._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
         console.log(imgPath)
         const modalImg = document.querySelector(".right img");
-        modalImg.setAttribute("src", imgPath);
+        modalImg.setAttribute("src", imgPath);*/
+
+        document.querySelector(".right img").setAttribute("src", modalContent.image_painting.guid);
 
         const modal = document.querySelector(".modal-background");
         modal.addEventListener("click", () => {
