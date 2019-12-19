@@ -1074,8 +1074,12 @@ body {
 
 @media (max-width:800px) {
 
+    .paint {
+        max-height: 300px;
+    }
+
     .modalContent {
-        font-size: 15px;
+        font-size: 18px;
         font-family: 'Baskerville', serif;
         margin: 20px 50px;
     }
@@ -1089,14 +1093,14 @@ body {
     }
 
     .dimensions {
-        font-size: 10px;
+        font-size: 16px;
         font-family: 'Baskerville', serif;
         color: white;
         font-style: italic;
     }
     
     .materials {
-        font-size: 10px;
+        font-size: 16px;
         font-family: 'Baskerville', serif;
         color: white;
         font-style: italic;
