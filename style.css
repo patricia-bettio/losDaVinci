@@ -127,7 +127,6 @@ body {
 }
 
 
-
 .dianaT {
     text-align: center;
     font-size: 80px;
@@ -157,36 +156,15 @@ body {
 }
 
 
-@media (max-width: 850px) {
-    .dianaT {
-        text-align: center;
-        font-size: 60px;
-        margin: 0;
-        font-family: 'Baskerville', serif;
-        line-height: 1em;
-    }
-
-    .dianaSub {
-        text-align: center;
-        font-family: 'Baskerville', serif;
-        margin: 20px;
-        font-style: italic;
-        font-size: 20px;
-    
-    }
-    
-    .dianaLocal {
-        text-align: center;
-        font-family: 'Lemon/Milk', serif;
-        font-weight: lighter;
-        margin: 0;
-        margin-bottom: 30px;
-        font-size: 8px;
-        text-transform: uppercase;
-    
-    }
+.scrollsign {
+    transform: rotate(270deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 50%;
+    margin: 40px;
+    color: #c0d3d6;
+    font-family: 'Baskerville', serif;
 }
-
 
 .homeimage {
     height: 35%;
@@ -542,6 +520,7 @@ form {
     display: flex;
 
 }
+
 
 .contactMail {
     display: block;
@@ -1022,15 +1001,11 @@ body {
 .modalContent {
     font-size: 20px;
     font-family: 'Baskerville', serif;
-    margin: 40px 80px;
 }
 
 .modalTitle {
     font-size: 40px;
     font-family: 'Baskerville', serif;
-    color: white;
-    font-style: italic;
-    padding-top: 20px;
 }
 
 .dimensions {
@@ -1055,15 +1030,4 @@ body {
     position: static;
     font-size: 20px;
     padding: 1px;
-}
-
-@media (max-width:800px) {
-
-    .modalTitle {
-        font-size: 50px;
-        font-family: 'Baskerville', serif;
-        padding-top: 20px;
-        font-style: italic;
-        color: white;
-    }
 }
