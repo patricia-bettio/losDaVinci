@@ -84,7 +84,7 @@ body {
     .homemenu {
         margin: 0;
         padding: 20px;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 85%);
         display: block;
     }
 
@@ -226,6 +226,15 @@ nav a {
     text-align: left;
 }
 
+.scrollsign {
+    transform: rotate(270deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 50%;
+    margin: 40px;
+    color: #c0d3d6;
+    font-family: 'Baskerville', serif;
+}
 @media screen and (max-width: 850px) {
     .scrollsign {
         top: 30%;
@@ -800,11 +809,8 @@ form {
 
 /*Lucci32*/
 
-
-#arrowleft,
-#arrowright,
 #artpaint {
-    max-width: 100%;
+    max-width: 95%;
 }
 
 body {
@@ -996,7 +1002,7 @@ body {
     padding: 2em;
 }
 
-.container div {
+.container div{
     height: 50vh;
 }
 
