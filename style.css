@@ -12,13 +12,13 @@ body {
 
 .instaIcon {
     margin-left: auto;
-    color: #c0d3d6;
+    color: black;
     text-transform: lowercase;
-    font-family: 'Lemon/Milk';
+    font-family: 'Baskerville', serif;
 }
 
 .instaIcon a:hover {
-    color: black;
+    color: #c0d3d6;
 }
 
 .homemenu {
@@ -41,6 +41,7 @@ body {
     color: black;
     font-family: 'Baskerville', serif;
     text-decoration: none;
+    text-transform: capitalize;
     padding: 10px 30px;
     font-size: 14px;
 }
@@ -146,7 +147,7 @@ body {
 .dianaLocal {
     text-align: center;
     color: white;
-    font-family: 'Lemon/Milk', serif;
+    font-family: 'Baskerville', serif;
     font-weight: lighter;
     margin: 0;
     margin-bottom: 30px;
@@ -176,7 +177,7 @@ body {
 
     .dianaLocal {
         text-align: center;
-        font-family: 'Lemon/Milk', serif;
+        font-family: 'Baskerville', serif;
         font-weight: lighter;
         margin: 0;
         margin-bottom: 30px;
