@@ -286,6 +286,7 @@ section {
     max-height: 100vh;
     justify-content: center;
     justify-self: center;
+    margin-bottom: 50px;
 }
 
 #transition2 {
